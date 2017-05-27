@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="263px" height="426px" viewBox="0 0 263 426" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>Faucet</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M156.143161,308 L105,308 L105,425 L156.143161,425 L156.143161,425.30311 L209.662546,425.30311 L209.662546,425 L263,425 L263,308 L209.662546,308 L209.662546,2.84217094e-14 L0,2.84217094e-14 L0,70.334745 L38.7837138,70.334745 L38.7837138,46.5811392 L156.143161,46.5811392 L156.143161,308 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-6" transform="translate(-756.000000, -286.000000)">
+            <g id="Faucet" transform="translate(756.000000, 286.000000)">
+                <g id="Combined-Shape">
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <path stroke="#979797" stroke-width="1" d="M105.5,308.5 L105.5,424.5 L156.643161,424.5 L156.643161,424.80311 L209.162546,424.80311 L209.162546,424.5 L209.662546,424.5 L262.5,424.5 L262.5,308.5 L209.162546,308.5 L209.162546,0.5 L0.5,0.5 L0.5,69.834745 L38.2837138,69.834745 L38.2837138,46.0811392 L156.643161,46.0811392 L156.643161,308.5 L105.5,308.5 Z"></path>
+                </g>
+                <g id="Incrementer" transform="translate(131.000000, 345.000000)">
+                    <rect id="Rectangle-6-Copy" fill="#2E2E2E" x="0" y="5" width="100" height="40"></rect>
+                    <rect id="Rectangle-6" fill="#6C6C6C" x="0" y="0" width="100" height="40"></rect>
+                    <text id="127" font-family="Futura-Medium, Futura" font-size="20" font-weight="400" fill="#8CF57E">
+                        <tspan x="31.484375" y="28">127</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
