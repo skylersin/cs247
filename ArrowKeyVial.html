@@ -8,64 +8,64 @@
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<script src="http://code.interactjs.io/v1.2.6/interact.min.js" defer></script>
-		<script src="js/arrowkeyvial.js" defer></script>
+		<script src="js/arrow_limited.js" defer></script>
 	</head>
  <body>
-	<svg id="smallvial" width="39px" height="200px" viewBox="0 0 39 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
-	    <title>Small</title>
-	    <desc>Created with Sketch.</desc>
-	    <defs></defs>
-	    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-	        <g id="Page-8-Copy" transform="translate(-482.000000, -425.000000)">
-	            <g id="Group-2" transform="translate(115.000000, 425.000000)">
-	                <g id="Small" transform="translate(367.696078, 0.000000)">
-	                    <g transform="translate(-0.000000, 0.000000)">
-	                        <rect id="Vial-Fill-Small" fill="#97FF93" x="0" y="200" width="37.5490196" height="1000"></rect>
-	                        <rect id="Vial-Outline" stroke="#979797" stroke-width="3.75" x="1.875" y="1.875" width="33.7990196" height="196.25"></rect>
-	                    </g>
-	                    <g id="Measurment-Small" transform="translate(-0.000000, 10.000000)" fill="#979797">
-	                        <rect id="Rectangle-4-Copy" x="17.3039216" y="165" width="20" height="5"></rect>
-	                        <rect id="Rectangle-4-Copy-10" x="17.3039216" y="145" width="20" height="5"></rect>
-	                        <rect id="Rectangle-4-Copy-11" x="17.3039216" y="125" width="20" height="5"></rect>
-	                        <rect id="Rectangle-4-Copy-12" x="17.3039216" y="105" width="20" height="5"></rect>
-	                        <rect id="Rectangle-4-Copy-13" x="17.3039216" y="85" width="20" height="5"></rect>
-	                        <rect id="Rectangle-4-Copy-14" x="17.3039216" y="65" width="20" height="5"></rect>
-	                        <rect id="Rectangle-4-Copy-15" x="17.3039216" y="45" width="20" height="5"></rect>
-	                        <rect id="Rectangle-4-Copy-16" x="17.3039216" y="5" width="20" height="5"></rect>
-	                        <rect id="Rectangle-4-Copy-18" x="17.3039216" y="25" width="20" height="5"></rect>
-	                        <text id="1" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
-	                            <tspan x="7.57734388" y="174">1</tspan>
-	                        </text>
-	                        <text id="2" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
-	                            <tspan x="7.57734388" y="153">2</tspan>
-	                        </text>
-	                        <text id="3" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
-	                            <tspan x="7.57734388" y="133">3</tspan>
-	                        </text>
-	                        <text id="4" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
-	                            <tspan x="7.57734388" y="113">4</tspan>
-	                        </text>
-	                        <text id="5" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
-	                            <tspan x="7.57734388" y="93">5</tspan>
-	                        </text>
-	                        <text id="6" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
-	                            <tspan x="7.57734388" y="73">6</tspan>
-	                        </text>
-	                        <text id="7" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
-	                            <tspan x="7.57734388" y="53">7</tspan>
-	                        </text>
-	                        <text id="8" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
-	                            <tspan x="7.57734388" y="33">8</tspan>
-	                        </text>
-	                        <text id="9" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
-	                            <tspan x="7.57734388" y="13">9</tspan>
-	                        </text>
-	                    </g>
-	                </g>
-	            </g>
-	        </g>
-	    </g>
-	</svg>
-  </body>
+ <div class="container">
+     <div id="scene-box">
+        <div class="row direction">
+            <div class="col-md-12 ">
+                <p class="scidirection">How would you measure 35 in base 10?</p>
+            </div>
+        </div>
+         <div  class="row vialrow">
+            <div id="large-vial-col" class="col-md-3">
+               <object id="large-vial-obj" data="images/large.svg" type="image/svg+xml">
+               </object>
+               <p id="large-focused">---</p>
+            </div>
+            <div id="med-vial-col" class="col-md-3">
+               <object id="med-vial-obj" data="images/med.svg" type="image/svg+xml">
+               </object>
+               <p id="med-focused">---</p>
+            </div>
+            <div id="small-vial-col" class="col-md-3">
+               <object id="small-vial-obj" data="images/small.svg" type="image/svg+xml">
+               </object>
+               <p id="small-focused">---</p>
+            </div>
+            <div id="mathCol" class="col-md-3">
+                <div id="math-total" class="row">
+                    <p>SHOW MATH HERE xxxxxxxxxxxxx</p>
+                </div>
+                <div id="math-largest-sub" class="row">
+                    <p>SHOW MATH HERE xxxxxxxxxxxxx</p>
+                </div>
+                <div id="math-med-sub" class="row">
+                    <p>SHOW MATH HERE xxxxxxxxxxxxx</p>
+                </div>
+                <div id="math-small-sub" class="row">
+                    <p class="border-bot">SHOW MATH HERE xxxxxxxxxxxxx</p>
+                </div>
+                <div id="math-result" class="row">
+                    <p >SHOW MATH HERE xxxxxxxxxxxxx</p>
+                </div>
+            </div>
+        </div>
+        <div id="button-row" class="row">
+           <!-- <div class="col-md-6">
+                <button id="add-beaker-button" onclick="addBeaker()">
+                    ADD BEAKER
+                </button>
+            </div>
+            <div class="col-md-6">
+                <button id="show-math-button" onclick="showMath()">
+                    SHOW MATH
+                </button>
+            </div>
+            -->
+        </div>
+    </div>
+ </div>
+ </body>
 </html>
