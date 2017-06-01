@@ -107,6 +107,7 @@ function incr_focused_vial(){
         vialAmounts[focusedBeaker] += 1;
         update_curr_amount();
         updateVials();    
+        updateMath();
       }
   } else{
     console.log("FOUCSED BEAKER: " + focusedBeaker);
@@ -120,6 +121,7 @@ function decr_focused_vial(){
     vialAmounts[focusedBeaker] -= 1;
     update_curr_amount();
     updateVials();
+    updateMath();
   } else{
     console.log("This beaker is already at 0");
   }
@@ -154,6 +156,24 @@ function updateVials(){
   //vialFill.setAttribute("y", 200+thisVialAmount*20);
 
 }
+
+
+function updateMath(){
+  var largeMathElem = document.getElementById("math-largest-sub");
+  largeMathElem.textContent = "-" + amount_base_10(vialAmounts[2], 2);
+
+  var medMathElem = document.getElementById("math-med-sub");
+  medMathElem.textContent = "-" + amount_base_10(vialAmounts[1], 1);
+
+  var smallMathElem = document.getElementById("math-small-sub");
+  smallMathElem.textContent = "-" + amount_base_10(vialAmounts[0], 0);
+
+
+  var resultMathElem = document.getElementById("math-result");
+  resultMathElem.textContent = GOAL_AMOUNT - curr_amount; 
+
+}
+
 
 function addBeaker(){
         console.log(document.getElementById("large-vial-obj"));

@@ -12,17 +12,77 @@
 	.sectionClass#div2 looks for something with both the class and id
 */
 
-p {
-	color: red;
-}
 
 .sectionClass {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: blue;
 }
 
+
 #div1 {
 	color: green;
+}
+
+
+/* Defines CSS for the directions at top
+ * of scene box*/
+.direction {
+    margin-top: -10%;
+    text-align:center;
+}
+
+.scidirection {
+    margin: 5%;
+}
+
+.vialrow {
+    margin: 5%;
+    padding-right:10%;
+}
+
+/* Should be hidden until users
+ * adds another beaker*/
+#large-focused{
+/*    display:none;*/
+    visibility:hidden;
+    /*opacity:0;*/
+}
+
+/* Should be hidden until users
+ * adds another beaker*/
+#med-focused{
+    /*display:none;*/
+    visibility:hidden;
+    /*opacity:0;*/
+}
+
+#small-focused{
+    /*display:none;*/
+    /*opacity:0;*/
+}
+
+#button-row {
+    padding-top:5%;
+    
+    align:center;
+}
+
+#scene-box {
+    border: 3px solid #ccc;
+    height: 80vh;
+    margin-top:10%;
+    padding:10px;
+    /*padding-top:20%;*/
+    padding:5%;
+    padding-top:10%;
+}
+
+.border-bot {
+    border-bottom: double;
+}
+
+.border-top {
+    border-top: double;
 }
 
 #drag-1, #drag-2 {
@@ -142,3 +202,7 @@ svg {
   background-color: #4e4;
 }
 
+.fill {
+  background-color: #4e4;
+  color: #000000;
+}
