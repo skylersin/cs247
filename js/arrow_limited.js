@@ -2,6 +2,9 @@
 // Globals
 var BASE = 10;
 var GOAL_AMOUNT = 35; // the amount the user is supposed to represent
+var GRAY_COLOR = "#979797"
+var HIGHLIGHT_COLOR = "#97FF93"
+var BLACK_COLOR = "#000000"
 
 var LEFT_KEYCODE = 37;
 var UP_KEYCODE = 38;
@@ -64,15 +67,22 @@ document.onkeydown = checkKeycode;
         
 function updateBeakerFocus(){
     if(focusedBeaker == 0){
-        document.getElementById("med-focused").style.visibility = "hidden";
-        document.getElementById("small-focused").style.visibility = "visible";
+        // show small
+        focus(0);
+        // hide medium
+        unfocus(1);
     }else if(focusedBeaker == 1){
-        document.getElementById("large-focused").style.visibility = "hidden";
-        document.getElementById("med-focused").style.visibility = "visible";
-        document.getElementById("small-focused").style.visibility = "hidden";
+         // hide large
+         unfocus(2);
+         // hide small
+         unfocus(0);
+         // show medium
+         focus(1);
     }else {
-        document.getElementById("large-focused").style.visibility = "visible";
-        document.getElementById("med-focused").style.visibility = "hidden";
+        // show large
+        focus(2);
+        // hide medium
+        unfocus(1);
     }
 }
 
@@ -136,24 +146,29 @@ function decr_focused_vial(){
 // - map from index --> ID and the height of it.
 function updateVials(){
    var thisVialAmount = vialAmounts[0];
-  var vialFill = document.getElementById("smallVialObj");
   var svgDoc = document.getElementById("small-vial-obj").contentDocument 
-  svgDoc.getElementById("Vial-Fill").setAttribute("y", 200-thisVialAmount*20);
-  
+  if(thisVialAmount != 0){
+     svgDoc.getElementById("Vial-Fill").setAttribute("y", 200-thisVialAmount*20);
+  } else{
+     svgDoc.getElementById("Vial-Fill").setAttribute("y", 210-thisVialAmount*20);
+  }
+
   thisVialAmount = vialAmounts[1];
-  vialFill = document.getElementById("medVialObj");
   svgDoc = document.getElementById("med-vial-obj").contentDocument 
-  svgDoc.getElementById("Vial-Fill").setAttribute("y", 200-thisVialAmount*20);
+  if(thisVialAmount != 0){
+     svgDoc.getElementById("Vial-Fill").setAttribute("y", 200-thisVialAmount*20);
+  } else{
+     svgDoc.getElementById("Vial-Fill").setAttribute("y", 210-thisVialAmount*20);
+  }
  
   thisVialAmount = vialAmounts[2];
-  vialFill = document.getElementById("largeVialObj");
   svgDoc = document.getElementById("large-vial-obj").contentDocument 
-  console.log(svgDoc);
-  svgDoc.getElementById("Vial-Fill").setAttribute("y", 200-thisVialAmount*20);
+  if(thisVialAmount != 0){
+     svgDoc.getElementById("Vial-Fill").setAttribute("y", 200-thisVialAmount*20);
+  } else{
+     svgDoc.getElementById("Vial-Fill").setAttribute("y", 210-thisVialAmount*20);
+  }
  
-  //fillAttrib.setAttribute("y", 200-thisVialAmount*20);
-  // --> this makes the whole beaker empty --> could be useful later??
-  //vialFill.setAttribute("y", 200+thisVialAmount*20);
 
 }
 
@@ -197,174 +212,35 @@ function addBeaker(){
 
 }
 
+
+function unfocus(index){
+    if(index == 2){
+        var svgDoc = document.getElementById("large-vial-obj").contentDocument 
+    } else if(index == 1){
+        var svgDoc = document.getElementById("med-vial-obj").contentDocument 
+    } else{
+        var svgDoc = document.getElementById("small-vial-obj").contentDocument 
+    }
+    svgDoc.getElementById("Highlight").setAttribute("visibility", "hidden");
+    svgDoc.getElementById("Vial-Outline").setAttribute("stroke", GRAY_COLOR);
+    svgDoc.getElementById("Measurment-Small").setAttribute("fill", GRAY_COLOR);
+}
+
+function focus(index){
+    if(index == 2){
+        var svgDoc = document.getElementById("large-vial-obj").contentDocument 
+    } else if(index == 1){
+        var svgDoc = document.getElementById("med-vial-obj").contentDocument 
+    } else{
+        var svgDoc = document.getElementById("small-vial-obj").contentDocument 
+    }
+    svgDoc.getElementById("Highlight").setAttribute("visibility", "visible");
+    svgDoc.getElementById("Vial-Outline").setAttribute("stroke", BLACK_COLOR);
+    svgDoc.getElementById("Measurment-Small").setAttribute("fill", BLACK_COLOR);
+}
+
 function showMath(){
 
 }
-
-
-//  var largevial = document.getElementById("largevial");
-//  var largeHeight = parseInt(largevial.getAttribute("height"));
-//  var largeWidth = parseInt(largevial.getAttribute("width"));
-//  document.getElementById("large-div").style.height = largeHeight+30+"px";
-//  document.getElementById("large-div").style.width = largeWidth+30+"px";
-
-//  var medvial = document.getElementById("medvial");
-//  var medHeight = parseInt(medvial.getAttribute("height"));
-//  var medWidth = parseInt(medvial.getAttribute("width"));
-//  document.getElementById("med-div").style.height = medHeight+30+"px";
-//  document.getElementById("med-div").style.width = medWidth+30+"px";
-
-//  var smallvial = document.getElementById("smallvial");
-//  var smallHeight = parseInt(smallvial.getAttribute("height"));
-//  var smallWidth = parseInt(smallvial.getAttribute("width"));
-//  document.getElementById("small-div").style.height = smallHeight+30+"px";
-//  document.getElementById("small-div").style.width = smallWidth+30+"px";
-
-// //Increments by 20
-// var smallVial = 0
-// document.getElementById("smallVialNum").textContent = smallVial;
-// var medVial = 0
-// document.getElementById("medVialNum").textContent = medVial;
-// var largeVial = 0
-// document.getElementById("largeVialNum").textContent = largeVial;
-// var total = 115
-// document.getElementById("total").textContent = total;
-
-
-// function updateNumDisplays(){
-//   document.getElementById("smallVialNum").textContent = smallVial;
-//   var vialFill = document.getElementById("Vial-Fill-Small");
-//   vialFill.setAttribute("y", 200-smallVial*20)
-
-//   document.getElementById("medVialNum").textContent = medVial;
-//   var vialFill = document.getElementById("Vial-Fill-Med");
-//   vialFill.setAttribute("y", 200-medVial*20)
-
-//   document.getElementById("largeVialNum").textContent = largeVial;
-//   var vialFill = document.getElementById("Vial-Fill-Large");
-//   vialFill.setAttribute("y", 200-largeVial*20)
-
-//   document.getElementById("total").textContent = total;
-// }
-
-// function fillSmallVial(){
-//   if(medVial == BASE){
-//     emptyMedVial();
-//   }
-
-//   if (smallVial < BASE && medVial != BASE && total > 0){
-//     total--;
-//     smallVial++;
-//     updateNumDisplays();
-//   }
-//   else{
-
-//   }
-
-// }
-
-// function emptyMedVial(){
-//    document.getElementById("med-div").className = "draggable drag-drop";
-// }
-
-
-
-// interact('.dropzone').dropzone({
-//   // only accept elements matching this CSS selector
-//   accept: '#small-div, #med-div',
-//   // Require a 75% element overlap for a drop to be possible
-//   overlap: 0.75,
-
-//   // listen for drop related events:
-
-//   ondropactivate: function (event) {
-//     // add active dropzone feedback
-//     event.target.classList.add('drop-active');
-//   },
-//   ondragenter: function (event) {
-//     var draggableElement = event.relatedTarget,
-//         dropzoneElement = event.target;
-
-//     // feedback the possibility of a drop
-//     dropzoneElement.classList.add('drop-target');
-//     // draggableElement.classList.add('can-drop');
-//     // draggableElement.textContent = 'Dragged in';
-
-//   },
-//   ondragleave: function (event) {
-//     // remove the drop feedback style
-//     event.target.classList.remove('drop-target');
-//    //Increments by 20
-//    //Set increment value to 0 after 
-//     if (smallVial == BASE) {
-//       medVial += 1;
-//       smallVial = 0;
-//       updateNumDisplays();
-//     } else if (medVial == BASE) {
-//       console.log("here");
-//       largeVial += 1;
-//       medVial = 0;
-//       updateNumDisplays();
-//       console.log(largeVial);
-//       document.getElementById("med-div").className = "dropzone";
-//     }
-//   },
-//   ondrop: function (event) {
-//     event.relatedTarget.textContent = 'Dropped';
-//   },
-//   ondropdeactivate: function (event) {
-//     // remove active dropzone feedback
-//     event.target.classList.remove('drop-active');
-//     event.target.classList.remove('drop-target');
-//   }
-// });
-
-
-
-
-
-// // target elements with the "draggable" class
-// interact('.draggable')
-//   .draggable({
-//     // enable inertial throwing
-//     inertia: true, // was true
-//     // keep the element within the area of it's parent
-//     restrict: {
-//       restriction: "parent",
-//       endOnly: true,
-//       //elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
-//     },
-//     // enable autoScroll
-//     autoScroll: true,
-
-//     // call this function on every dragmove event
-//     onmove: dragMoveListener,
-//     // call this function on every dragend event
-//     onend: function (event) {
-//       // var textEl = event.target.querySelector('p');
-
-//       // textEl.textContent = 'moved a distance of '+ (Math.sqrt(event.dx * event.dx + event.dy * event.dy)|0) + 'px';
-//     }
-//   });
-
-//   function dragMoveListener (event) {
-//     var target = event.target,
-//         // keep the dragged position in the data-x/data-y attributes
-//         x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
-//         y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-
-
-//     // translate the element
-//     target.style.webkitTransform =
-//     target.style.transform =
-//       'translate(' + x + 'px, ' + y + 'px)';
-
-//     // update the posiion attributes
-//     target.setAttribute('data-x', x);
-//     target.setAttribute('data-y', y);
-//   }
-
-//   // this is used later in the resizing and gesture demos
-//   window.dragMoveListener = dragMoveListener;
 
 
