@@ -40,30 +40,52 @@
     padding-right:10%;
 }
 
-/* Should be hidden until users
- * adds another beaker*/
-#large-focused{
-/*    display:none;*/
-    visibility:hidden;
-    /*opacity:0;*/
+.mathtext {
+margin-bottom:0%;
+
 }
 
-/* Should be hidden until users
- * adds another beaker*/
-#med-focused{
-    /*display:none;*/
-    visibility:hidden;
-    /*opacity:0;*/
+.sidenumrow {
+padding:1%;
+padding-bottom:0%;
+margin-bottom:0%;
 }
 
-#small-focused{
-    /*display:none;*/
-    /*opacity:0;*/
+#math-total{
+font-size: 1.1em;
+padding:1%;
+padding-bottom:0%;
+}
+
+#math-result{
+ color:#B2434C;
+}
+
+#message {
+ font-size: 1.1em;
+ color:#B2434C;
+ font-style:italic;
+}
+
+#mathCol{
+font-size: 1.7em;
+}
+
+#large-math{
+   /* visibility:hidden;*/
+   font-size:1.2em;
+}
+
+#med-math{
+    /*visibility:hidden;*/
+   font-size:1.2em;
+}
+
+#small-math{
+   font-size:1.2em;
 }
 
 #button-row {
-    padding-top:5%;
-    
     align:center;
 }
 

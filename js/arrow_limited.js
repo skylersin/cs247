@@ -5,11 +5,15 @@ var GOAL_AMOUNT = 35; // the amount the user is supposed to represent
 var GRAY_COLOR = "#979797"
 var HIGHLIGHT_COLOR = "#97FF93"
 var BLACK_COLOR = "#000000"
+var RED_COLOR = "#B2434C"
+var GREEN_COLOR = "#55B26B"
 
 var LEFT_KEYCODE = 37;
 var UP_KEYCODE = 38;
 var RIGHT_KEYCODE = 39;
 var DOWN_KEYCODE = 40;
+
+var DONE = false;
 
 // This holds how much liquid is in each beaker
 // Indexed from 0: right most beaker --> end
@@ -21,6 +25,7 @@ var curr_amount = 0; // keeps track of amount represented in beaker
 var focusedBeaker = 0;
 
 function action_arrow_key(keyCodeNumber) {
+    set_message("");
     switch (keyCodeNumber) {
     case UP_KEYCODE:
         console.log('UP');
@@ -102,16 +107,25 @@ function places_to_base_10(place_0, place_1, place_2){
 
 }
 
+
+function set_message(text, color_green=false){
+   if(!DONE){
+       if(color_green){
+         document.getElementById("message").style.color = GREEN_COLOR; 
+       }else{
+         document.getElementById("message").style.color = RED_COLOR; 
+       }
+       document.getElementById("message").textContent = text; 
+   }
+}
+
 function incr_focused_vial(){
   // do check
   if(vialAmounts[focusedBeaker] < BASE -1){
       if((curr_amount + amount_base_10(1,focusedBeaker)) > GOAL_AMOUNT ){
         
-        console.log("curr_amount: " + curr_amount);
-        console.log("proposed: " + amount_base_10(vialAmounts[focusedBeaker]+1,
-                  focusedBeaker));
-        console.log("GOAL_AMOUNT: " + GOAL_AMOUNT);
-        console.log("Nope! This would bring you over the total.");
+        set_message("You can't add to this beaker! That would bring you over 35 base 10.");
+      
       } else{
          
         vialAmounts[focusedBeaker] += 1;
@@ -120,8 +134,7 @@ function incr_focused_vial(){
         updateMath();
       }
   } else{
-    console.log("FOUCSED BEAKER: " + focusedBeaker);
-    console.log("Add another beaker! This beaker can only hold " + (BASE - 1) + " units!");
+    set_message("Try adding to a different beaker. This one does not have anymore space.");
   }
 
 }
@@ -133,7 +146,7 @@ function decr_focused_vial(){
     updateVials();
     updateMath();
   } else{
-    console.log("This beaker is already at 0");
+    set_message("Ah, you cannot take any more liquid out of this beaker--it's empty!");
   }
 
 }
@@ -172,43 +185,51 @@ function updateVials(){
 
 }
 
+function get_math_html(vial_index){
+    return vialAmounts[vial_index] + " x " + Math.pow(BASE, vial_index) + " = " + "<b>" + (Math.pow(BASE, vial_index) * vialAmounts[vial_index]) + "</b>"
+}
 
 function updateMath(){
   var largeMathElem = document.getElementById("math-largest-sub");
   largeMathElem.textContent = "-" + amount_base_10(vialAmounts[2], 2);
+  var largeMathBelow = document.getElementById("large-math");
+  //largeMathBelow.textContent = get_math_str(2);
+  largeMathBelow.innerHTML = get_math_html(2);
+
 
   var medMathElem = document.getElementById("math-med-sub");
   medMathElem.textContent = "-" + amount_base_10(vialAmounts[1], 1);
+  var medMathBelow = document.getElementById("med-math");
+  //medMathBelow.textContent = get_math_str(1);
+  medMathBelow.innerHTML = get_math_html(1);
 
   var smallMathElem = document.getElementById("math-small-sub");
   smallMathElem.textContent = "-" + amount_base_10(vialAmounts[0], 0);
+  var smallMathBelow = document.getElementById("small-math");
+  //smallMathBelow.textContent = get_math_str(0);
+  smallMathBelow.innerHTML = get_math_html(0);
 
 
   var resultMathElem = document.getElementById("math-result");
   resultMathElem.textContent = GOAL_AMOUNT - curr_amount; 
-
-}
-
-
-function addBeaker(){
-        console.log(document.getElementById("large-vial-obj"));
-    console.log(numVials);
-    if(numVials == 3){
-        console.log("You don't need another vial");
-    } else if(numVials == 2){
-        console.log(document.getElementById("large-vial-obj"));
-        document.getElementById("large-vial-obj").style.display = 'inline';
-        
-       // document.getElementById("large-vial-obj").setAttribute("opacity",100);
-        //$(this).children("large-vial-obj").css('opacity', 100);
-        numVials++;
-    } else {
-        // this is the first add beaker
-        document.getElementById("med-vial-obj").setAttribute("opacity", 100);
-        document.getElementById("med-vial-obj").style.display = 'inline';
-        $(this).children("med-vial-obj").css('opacity', 100);
-        numVials++;
+  if (GOAL_AMOUNT == curr_amount){
+    // THE USER DID IT!!!!!!!!!
+    resultMathElem.style.color = GREEN_COLOR;
+    largeMathBelow.style.color = GREEN_COLOR;
+    medMathBelow.style.color = GREEN_COLOR;
+    smallMathBelow.style.color = GREEN_COLOR;
+    set_message("Well done! That's 35 in base 10. Notice how it was easier to fill the largest beakers first.", true);
+    DONE = true;
+  } else {
+    resultMathElem.style.color = RED_COLOR;
+    largeMathBelow.style.color = BLACK_COLOR;
+    medMathBelow.style.color = BLACK_COLOR;
+    smallMathBelow.style.color = BLACK_COLOR;
+    if(DONE){
+        DONE = false;
+        set_message("");
     }
+  }
 
 }
 
