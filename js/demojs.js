@@ -1,6 +1,6 @@
 
 
-var BASE = 10;
+var BASE = 2;
 
  var largevial = document.getElementById("largevial");
  var largeHeight = parseInt(largevial.getAttribute("height"));
@@ -22,49 +22,52 @@ var BASE = 10;
 
 //Increments by 20
 var smallVial = 0
-document.getElementById("smallVialNum").textContent = smallVial;
+// document.getElementById("smallVialNum").textContent = smallVial;
 var medVial = 0
-document.getElementById("medVialNum").textContent = medVial;
+// document.getElementById("medVialNum").textContent = medVial;
 var largeVial = 0
-document.getElementById("largeVialNum").textContent = largeVial;
+// document.getElementById("largeVialNum").textContent = largeVial;
 var total = 115
-document.getElementById("total").textContent = total;
 
 
 function updateNumDisplays(){
-  document.getElementById("smallVialNum").textContent = smallVial;
+  // document.getElementById("smallVialNum").textContent = smallVial;
   var vialFill = document.getElementById("Vial-Fill-Small");
   vialFill.setAttribute("y", 200-smallVial*20)
 
-  document.getElementById("medVialNum").textContent = medVial;
+  // document.getElementById("medVialNum").textContent = medVial;
   var vialFill = document.getElementById("Vial-Fill-Med");
   vialFill.setAttribute("y", 200-medVial*20)
 
-  document.getElementById("largeVialNum").textContent = largeVial;
+  // document.getElementById("largeVialNum").textContent = largeVial;
   var vialFill = document.getElementById("Vial-Fill-Large");
   vialFill.setAttribute("y", 200-largeVial*20)
 
-  document.getElementById("total").textContent = total;
+  var vialFill = document.getElementById("totalVial");
+  vialFill.innerHTML = total;
 }
 
 function fillSmallVial(){
-  if(medVial == BASE){
-    emptyMedVial();
-  }
-
   if (smallVial < BASE && medVial != BASE && total > 0){
     total--;
     smallVial++;
     updateNumDisplays();
   }
-  else{
-
-  }
-
 }
 
-function emptyMedVial(){
-   document.getElementById("med-div").className = "draggable drag-drop";
+function makeVialDraggable(){
+   document.getElementById("med-div").className = "draggable drag-drop vial";
+   document.getElementById("large-div").className = "dropzone vial";
+}
+
+function emptyMedVial() {
+  console.log("here");
+  largeVial += 1;
+  medVial = 0;
+  updateNumDisplays();
+  console.log(largeVial);
+  document.getElementById("med-div").className = "dropzone vial";
+  document.getElementById("large-div").className = "vial";
 }
 
 
@@ -100,13 +103,11 @@ interact('.dropzone').dropzone({
       medVial += 1;
       smallVial = 0;
       updateNumDisplays();
+      if (medVial == BASE) {
+        makeVialDraggable();
+      }
     } else if (medVial == BASE) {
-      console.log("here");
-      largeVial += 1;
-      medVial = 0;
-      updateNumDisplays();
-      console.log(largeVial);
-      document.getElementById("med-div").className = "dropzone";
+      emptyMedVial();
     }
   },
   ondrop: function (event) {
@@ -119,10 +120,6 @@ interact('.dropzone').dropzone({
   }
 });
 
-
-
-
-
 // target elements with the "draggable" class
 interact('.draggable')
   .draggable({
@@ -132,7 +129,7 @@ interact('.draggable')
     restrict: {
       restriction: "parent",
       endOnly: true,
-      //elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
+      elementRect: { top: -0.9, left: 0, bottom: 10, right: 10}
     },
     // enable autoScroll
     autoScroll: true,
