@@ -33,11 +33,11 @@
 
 .scidirection {
     margin: 5%;
+    font-size: 2.1em;
 }
 
 .vialrow {
     margin: 5%;
-    padding-right:10%;
 }
 
 .mathtext {
@@ -51,24 +51,39 @@ padding-bottom:0%;
 margin-bottom:0%;
 }
 
-#math-total{
-font-size: 1.1em;
-padding:1%;
-padding-bottom:0%;
-}
-
-#math-result{
- color:#B2434C;
-}
-
 #message {
  font-size: 1.1em;
  color:#B2434C;
  font-style:italic;
 }
 
+#math-total{
+font-size: 1.1em;
+padding:1%;
+padding-bottom:0%;
+}
+
+#math-total-side{
+font-size: 1.2em;
+padding:1%;
+padding-top:2%;
+padding-bottom:0%;
+margin-top: 20%;
+}
+
+#math-result{
+ color:#B2434C;
+}
+#math-result-side{
+ color:#B2434C;
+}
+
+
 #mathCol{
 font-size: 1.7em;
+}
+#mathCol-side{
+font-size: 1.em;
 }
 
 #large-math{
