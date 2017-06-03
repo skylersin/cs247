@@ -176,3 +176,245 @@ svg {
 *
 */
 
+#description{
+  color: white;
+  font-size: 12pt;
+}
+
+#gameTitle{
+  color: white;
+  font-size: 30pt;
+  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.sectionClass {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: blue;
+}
+
+
+#div1 {
+  color: green;
+}
+
+
+/* Defines CSS for the directions at top
+ * of scene box*/
+.direction {
+    margin-top: 0%;
+    text-align:center;
+}
+
+.scidirection {
+    margin: 5%;
+    font-size: 2.1em;
+}
+
+.vialrow {
+    margin: 5%;
+}
+
+.mathtext {
+margin-bottom:0%;
+
+}
+
+.sidenumrow {
+padding:1%;
+padding-bottom:0%;
+margin-bottom:0%;
+}
+
+#message {
+ font-size: 1.1em;
+ color:#B2434C;
+ font-style:italic;
+}
+
+#math-total{
+font-size: 1.1em;
+padding:1%;
+padding-bottom:0%;
+}
+
+#math-total-side{
+font-size: 1.2em;
+padding:1%;
+padding-top:2%;
+padding-bottom:0%;
+margin-top: 20%;
+}
+
+#math-result{
+ color:#B2434C;
+}
+#math-result-side{
+ color:#B2434C;
+}
+
+
+#mathCol{
+font-size: 1.7em;
+}
+#mathCol-side{
+font-size: 1.em;
+}
+
+#large-math{
+   /* visibility:hidden;*/
+   font-size:1.2em;
+}
+
+#med-math{
+    /*visibility:hidden;*/
+   font-size:1.2em;
+}
+
+#small-math{
+   font-size:1.2em;
+}
+
+#button-row {
+    align:center;
+}
+
+#scene-box {
+    border: 3px solid #ccc;
+    height: 80vh;
+    padding:10px;
+    background-color: #ffffff;
+    /*padding-top:20%;*/]
+}
+
+
+
+.border-bot {
+    border-bottom: double;
+}
+
+.border-top {
+    border-top: double;
+}
+
+#drag-1, #drag-2 {
+  width: 25%;
+  height: 100%;
+  min-height: 6.5em;
+  margin: 10%;
+
+  background-color: #29e;
+  color: white;
+
+  border-radius: 0.75em;
+  padding: 4%;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+#drag-me::before {
+  content: "#" attr(id);
+  font-weight: bold;
+}
+
+
+#unmovable {
+  width: 25%;
+  height: 100%;
+  min-height: 6.5em;
+  margin: 10%;
+
+  background-color: #29e;
+  color: white;
+
+  border-radius: 0.75em;
+  padding: 4%;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+#outer-dropzone {
+  height: 140px;
+}
+
+#inner-dropzone {
+  height: 500px;
+}
+
+.dropzone {
+  display: inline-block;
+
+  border: dashed 4px transparent;
+  border-radius: 4px;
+  margin: 10px auto 30px;
+  padding: 10px;
+  width: 40%;
+  transition: background-color 0.3s;
+}
+
+.drop-active {
+  border-color: #aaa;
+}
+
+.drop-target {
+  background-color: #29e;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.drag-drop {
+  display: inline-block;
+  min-width: 40px;
+  padding: 2em 0.5em;
+/*
+  color: #fff;
+  background-color: #29e;
+  border: solid 2px #fff;*/
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
+}
+
+svg {
+    z-index: -1;
+}
+
+.vial {
+    position: absolute;
+    bottom: 0;
+}
+
+#small-div {
+  height: 210px;
+  width: 50px;
+}
+
+#smallvial {
+    position: relative;
+    left: -200;
+    top: 0;
+    z-index: 1;
+}
+
+#faucet {
+  position: relative;
+  z-index: 2;
+}
+
+.drag-drop.draggable {
+/*  padding-bottom: 40px;
+*/}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #4e4;
+}
+
+.fill {
+  background-color: #4e4;
+  color: #000000;
+}
