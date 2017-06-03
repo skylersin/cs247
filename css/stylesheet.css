@@ -12,114 +12,17 @@
 	.sectionClass#div2 looks for something with both the class and id
 */
 
+p {
+	color: red;
+}
 
 .sectionClass {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: blue;
 }
 
-
 #div1 {
 	color: green;
-}
-
-
-/* Defines CSS for the directions at top
- * of scene box*/
-.direction {
-    margin-top: -10%;
-    text-align:center;
-}
-
-.scidirection {
-    margin: 5%;
-    font-size: 2.1em;
-}
-
-.vialrow {
-    margin: 5%;
-}
-
-.mathtext {
-margin-bottom:0%;
-
-}
-
-.sidenumrow {
-padding:1%;
-padding-bottom:0%;
-margin-bottom:0%;
-}
-
-#message {
- font-size: 1.1em;
- color:#B2434C;
- font-style:italic;
-}
-
-#math-total{
-font-size: 1.1em;
-padding:1%;
-padding-bottom:0%;
-}
-
-#math-total-side{
-font-size: 1.2em;
-padding:1%;
-padding-top:2%;
-padding-bottom:0%;
-margin-top: 20%;
-}
-
-#math-result{
- color:#B2434C;
-}
-#math-result-side{
- color:#B2434C;
-}
-
-
-#mathCol{
-font-size: 1.7em;
-}
-#mathCol-side{
-font-size: 1.em;
-}
-
-#large-math{
-   /* visibility:hidden;*/
-   font-size:1.2em;
-}
-
-#med-math{
-    /*visibility:hidden;*/
-   font-size:1.2em;
-}
-
-#small-math{
-   font-size:1.2em;
-}
-
-#button-row {
-    align:center;
-}
-
-#scene-box {
-    border: 3px solid #ccc;
-    height: 80vh;
-    margin-top:10%;
-    padding:10px;
-    /*padding-top:20%;*/
-    padding:5%;
-    padding-top:10%;
-}
-
-.border-bot {
-    border-bottom: double;
-}
-
-.border-top {
-    border-top: double;
 }
 
 #drag-1, #drag-2 {
@@ -173,7 +76,7 @@ font-size: 1.em;
 
   border: dashed 4px transparent;
   border-radius: 4px;
-  margin: 10px auto 30px;
+/*  margin: 10px auto 30px;*/
   padding: 10px;
   width: 40%;
   transition: background-color 0.3s;
@@ -218,6 +121,13 @@ svg {
   width: 50px;
 }
 
+/*#med-div {
+  height: 210px;
+  width: 50px;
+}*/
+
+
+
 #smallvial {
     position: relative;
     left: -200;
@@ -239,7 +149,3 @@ svg {
   background-color: #4e4;
 }
 
-.fill {
-  background-color: #4e4;
-  color: #000000;
-}
