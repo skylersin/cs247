@@ -16,6 +16,21 @@ p {
 	color: red;
 }
 
+.template {
+  background-color: #696969;
+}
+
+.chapter {
+  height: 40px;
+}
+
+#gameTitle{
+  color: white;
+  font-size: 30pt;
+  margin: 10px;
+  margin-bottom: 10px;
+}
+
 .sectionClass {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: blue;
@@ -148,4 +163,16 @@ svg {
   color: #000;
   background-color: #4e4;
 }
+
+
+
+/*
+*
+*
+*
+* DUPLICATES AFTER THIS POINT
+*
+*
+*
+*/
 
