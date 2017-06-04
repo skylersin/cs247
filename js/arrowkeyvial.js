@@ -8,7 +8,7 @@ var DOWN_KEYCODE = 40;
 
 // This holds how much liquid is in each beaker
 // Indexed from 0: right most beaker --> end
-var vialAmounts = [0];
+var vialAmounts = [0 0 0];
 
 // Index of focused beaker
 var focusedBeaker = 0;
@@ -54,7 +54,7 @@ function incr_focused_vial(){
   // do check
   if(vialAmounts[focusedBeaker] < BASE){
     vialAmounts[focusedBeaker] += 1;
-    updateVial(focusedBeaker);    
+    updateVials(focusedBeaker);    
   } else{
     console.log("Add another beaker! This beaker can only hold " + (BASE - 1) + " units!");
   }
@@ -64,7 +64,7 @@ function incr_focused_vial(){
 function decr_focused_vial(){
   if(vialAmounts[focusedBeaker] > 0){
     vialAmounts[focusedBeaker] -= 1;
-    updateVial();    
+    updateVials();    
   } else{
     console.log("This beaker is already at 0");
   }
@@ -77,12 +77,29 @@ function decr_focused_vial(){
 // - or could add next size up??
 // - and could have these hardcoded??
 // - map from index --> ID and the height of it.
-function updateVial(){
-  var thisVialAmount = vialAmounts[focusedBeaker];
+function updateVials(){
 
-  // later on, should change naming scheme to correspond with index
-  var vialFill = document.getElementById("Vial-Fill-Small");
-  vialFill.setAttribute("y", 200-thisVialAmount*20);
+  var thisVialAmount = vialAmounts[0];
+  var vialFill = document.getElementById("smallVialObj");
+  var svgDoc = document.getElementById("small-vial-obj").contentDocument 
+  svgDoc.getElementById("Vial-Fill").setAttribute("y", 200-thisVialAmount*20);
+  
+  
+  thisVialAmount = vialAmounts[1];
+  vialFill = document.getElementById("medVialObj");
+  svgDoc = document.getElementById("med-vial-obj").contentDocument 
+  svgDoc.getElementById("Vial-Fill").setAttribute("y", 200-thisVialAmount*20);
+ 
+
+  thisVialAmount = vialAmounts[2];
+  vialFill = document.getElementById("largeVialObj");
+  svgDoc = document.getElementById("large-vial-obj").contentDocument 
+  console.log(svgDoc);
+  svgDoc.getElementById("Vial-Fill").setAttribute("y", 200-thisVialAmount*20);
+  
+  
+  //fillAttrib.setAttribute("y", 200-thisVialAmount*20);
+  
   // --> this makes the whole beaker empty --> could be useful later??
   //vialFill.setAttribute("y", 200+thisVialAmount*20);
 

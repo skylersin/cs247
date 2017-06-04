@@ -1,60 +1,43 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Base 10</title>
+		<title>Base 5</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/stylesheet_arrowkey.css">
       	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<script src="http://code.interactjs.io/v1.2.6/interact.min.js" defer></script>
-		<script src="js/arrow_247_in_base_10_sandbox.js" defer></script>
+		<script src="js/arrow_16_in_base_5_limited.js" defer></script>
 	</head>
  <body>
  <div class="container">
      <div id="scene-box">
         <div class="row direction">
             <div class="col-md-12 ">
-                <p class="scidirection">How would you measure <b>247</b> in <b>base 10</b>?</p>
+                <p class="scidirection">How would you measure <b>16<sub>10</sub></b> in <b>base 5</b>?</p>
             </div>
         </div>
          <div  class="row vialrow">
             <div id="large-vial-col" class="col-md-3">
-               <object id="large-vial-obj" data="images/large-focused.svg" type="image/svg+xml">
+                <!--<object id="large-vial-obj" data="images/large.svg" type="image/svg+xml">-->
+               <object id="large-vial-obj" data="images/large-base5.svg" type="image/svg+xml">
                </object>
-               <p id="large-math">0 x 100 = <b>0</b></p>
+               <p id="large-math">0 x 25 = <b>0</b></p>
             </div>
             <div id="med-vial-col" class="col-md-3">
-               <object id="med-vial-obj" data="images/medium-focused.svg" type="image/svg+xml">
+               <object id="med-vial-obj" data="images/med-base5.svg" type="image/svg+xml">
                </object>
-               <p id="med-math">0 x 10 = <b>0</b></p>
+               <p id="med-math">0 x 5 = <b>0</b></p>
             </div>
             <div id="small-vial-col" class="col-md-3">
-               <object id="small-vial-obj" data="images/small-focused.svg" type="image/svg+xml">
+               <object id="small-vial-obj" data="images/small-base5.svg" type="image/svg+xml">
                </object>
                <p id="small-math">0 x 1 = <b>0</b></p>
             </div>
-            <!--<div id="mathCol-side" class="col-md-1 text-right">
-                <div id="math-total-side" class="row sidenumrow">
-                    <p class="mathtext">Total:</p>
-                </div>
-                <div  class="row sidenumrow">
-                    <p id="math-largest-sub-side" class="mathtext">&nbsp;</p>
-                </div>
-                <div class="row sidenumrow">
-                    <p id="math-med-sub-side" class="mathtext"> &nbsp;</p>
-                </div>
-                <div class="row sidenumrow">
-                    <p  id="math-small-sub-side" class="border-bot mathtext">
-                    &nbsp;<br> </p>
-                </div>
-                <div class="row sidenumrow">
-                    <p id="math-result-side" class="mathtext"></p>
-                </div>
-            </div>
-            <div id="mathCol" class="col-md-1 text-right">
+            <!--<div id="mathCol" class="col-md-3 text-right">
                 <div id="math-total" class="row sidenumrow">
-                    <p class="mathtext">247</p>
+                    <p class="mathtext">16</p>
                 </div>
                 <div  class="row sidenumrow">
                     <p id="math-largest-sub" class="mathtext">-0</p>
@@ -67,14 +50,15 @@
                     -0</p>
                 </div>
                 <div class="row sidenumrow">
-                    <p id="math-result" class="mathtext">247</p>
+                    <p id="math-result" class="mathtext">16</p>
                 </div>
             </div>
         </div>-->
             <div id="mathCol" class="col-md-3">
                 <div class="border-all">
                     <div id="math-total" class="row sidenumrow">
-                        <span id="math-total-side"> Total:</span><span id="math-total-side-num"> 247</span>                </div>
+                        <span id="math-total-side"> Total:</span><span id="math-total-side-num"> 16</span>                
+                    </div>
                     <div  class="row sidenumrow">
                         <p id="math-largest-sub" class="mathtext">-0</p>
                     </div>
@@ -86,7 +70,7 @@
                         -0</p>
                     </div>
                     <div class="row sidenumrow">
-                        <p id="math-result" class="mathtext">35</p>
+                        <p id="math-result" class="mathtext">16</p>
                     </div>
                 </div>
             </div>
@@ -94,26 +78,24 @@
         <div id="button-row" class="row">
             <p id="message"><p>
         </div>
-           <div id="question-row" class="row">
-            <div class="col-md11 offset-md-1 text-center">
+        <div id="question-row" class="row">
+            <div class="col-md4">
+                &nbsp;
+            </div>
+            <div class="col-md4 offset-md-4 text-center">
                 <div class="row" id="end-text">
-                    <p>CORRECT! That's 247<sub>10</sub>. Wasn't it easier to fill the largest beakers first?</p>   
+                    <p>Well done! 16<sub>10</sub> is 031<sub>5</sub></p>   
                 </div>
                 <div class="row center-block">
-                    <div class="col-md4 offset-md-5">
-                    
-<button id="continue-button" type="button" class="btn btn-secondary" onclick="nextPage()">
-<img src="images/continue-button.svg" width="170"/>
-</button>
+                    <div class="col-md4 offset-md-4">
+                    <button id="continue-button" type="button" class="btn btn-secondary" onclick="nextPage()">Continue</button>
                 </div>
                 </div>
             </div>
-            <div class = "col-md-2">
-                &nbsp;
+            <div class="col-md4">
                 &nbsp;
             </div>
         </div>
- 
     </div>
  </div>
  </body>
