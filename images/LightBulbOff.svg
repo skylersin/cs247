@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="188px" viewBox="0 0 120 188" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Lighbulb Off Copy 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M86.9491525,110.172285 L86.9491525,139.221622 L32.5423729,139.221622 L32.5423729,109.921053 C13.2156107,100.258964 0,80.7151504 0,58.1783784 C0,26.0473472 26.862915,0 60,0 C93.137085,0 120,26.0473472 120,58.1783784 C120,80.9122477 106.552222,100.600579 86.949158,110.172283 Z" id="path-1"></path>
+        <rect id="path-2" x="30" y="138.713514" width="60" height="32.0108108" rx="8"></rect>
+        <rect id="path-3" x="52.8813559" y="181.394595" width="14.2372881" height="6.60540541" rx="2"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-17" transform="translate(-187.000000, -477.000000)">
+            <g id="Lighbulb-Off-Copy-3" transform="translate(187.000000, 477.000000)">
+                <g id="Combined-Shape">
+                    <use fill="#fffff" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <path stroke="#000000" stroke-width="2" d="M33.5423729,138.221622 L85.9491525,138.221622 L85.9491525,109.547721 L86.5103925,109.273681 C106.270832,99.6251345 119,80.00186 119,58.1783784 C119,26.606649 92.5915819,1 60,1 C27.4084181,1 1,26.606649 1,58.1783784 C1,79.8071645 13.5020667,99.2841685 32.9895386,109.026602 L33.5423729,109.302982 L33.5423729,138.221622 Z"></path>
+                </g>
+                <polygon id="Path-2" stroke="#000000" stroke-width="2" points="49.8305085 138.959842 49.8305085 77.3464852 55.1804652 84.6327588 55.1804652 73.9540005 59.9198142 82.0088325 62.526079 73.9540005 64.9058189 81.1468884 69.9527337 73.9540005 69.9527337 138.959842"></polygon>
+                <ellipse id="Oval-2" stroke="#000000" fill="#000000" cx="60" cy="170.978378" rx="16.779661" ry="12.9567568"></ellipse>
+                <g id="Rectangle-3">
+                    <use fill="#A1A1A1" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <rect stroke="#000000" stroke-width="4" x="32" y="140.713514" width="56" height="28.0108108" rx="8"></rect>
+                </g>
+                <g id="Rectangle-4">
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <rect stroke="#000000" stroke-width="3" x="54.3813559" y="182.894595" width="11.2372881" height="3.60540541" rx="1.8027027"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

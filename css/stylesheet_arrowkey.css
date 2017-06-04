@@ -1,0 +1,156 @@
+
+/* Defines CSS for the directions at top
+ * of scene box*/
+.direction {
+    margin-top: -10%;
+    text-align:center;
+}
+
+.scidirection {
+    margin: 5%;
+    font-size: 2.1em;
+}
+
+.vialrow {
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.formulatitles{
+    text-align:center;
+    margin-bottom: 2%;
+}
+
+.mathtext {
+margin-bottom:0%;
+
+}
+
+.sidenumrow {
+padding:1%;
+padding-bottom:0%;
+margin-bottom:0%;
+}
+
+.form-text {
+    font-size: 1.5em;
+}
+
+#question-text {
+    font-size: 2em;
+    display: inline;
+}
+
+#equal-correct {
+    display:none;
+}
+
+#equal-wrong {
+    display:none;
+}
+
+#try-again {
+    margin-top:1%;
+    display:none;
+    padding-top:1%;
+}
+
+#continue {
+    margin-top:1%;
+    padding-top:1%;
+}
+
+#button-no{
+    display: inline;
+}
+
+#button-yes{
+    display: inline;
+}
+
+#message {
+ font-size: 1.1em;
+ color:#B2434C;
+ font-style:italic;
+}
+
+#math-total{
+font-size: 1.1em;
+padding:1%;
+padding-bottom:0%;
+}
+
+#math-total-side{
+font-size: 1.2em;
+padding:1%;
+padding-top:2%;
+padding-bottom:0%;
+margin-top: 20%;
+}
+
+#math-result{
+ color:#B2434C;
+}
+#math-result-side{
+ color:#B2434C;
+}
+
+
+#mathCol{
+font-size: 1.7em;
+}
+#mathCol-side{
+font-size: 1.em;
+}
+
+#large-math{
+   /* visibility:hidden;*/
+   font-size:1.2em;
+}
+
+#med-math{
+    /*visibility:hidden;*/
+   font-size:1.2em;
+}
+
+#small-math{
+   font-size:1.2em;
+}
+
+#button-row {
+    align:center;
+}
+
+#small-vial-col-A {
+    padding-left: 0%;
+    margin-left: -2%;
+}
+#small-vial-col-B {
+    padding-left: 0%;
+    margin-left: -2%;
+}
+
+#large-vial-col-B{
+
+}
+
+#scene-box {
+    border: 3px solid #ccc;
+    height: 80vh;
+    margin-top:10%;
+    padding:10px;
+    /*padding-top:20%;*/
+    padding:5%;
+    padding-top:10%;
+}
+
+.border-bot {
+    border-bottom: double;
+}
+
+.border-top {
+    border-top: double;
+}
+
+
+
