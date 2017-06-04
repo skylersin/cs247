@@ -1,0 +1,17 @@
+.top-buffer { margin-top:20px; }
+
+body {
+  font-family: 'Futura', sans-serif;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.scene-box {
+    border: 3px solid #ccc;
+    margin-top:5%;
+    padding-top:5%;
+    padding-bottom: 5%;
+}

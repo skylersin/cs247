@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Lightbulb</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="css/lightbulb.css">
+      	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="js/lightbulb.js" defer></script>
+	</head>
+ <body>
+    <div class="container scene-box">
+      <div class="row">
+            <div class="col-md-12 text-center">
+                  <h1>Yes! The antidote worked!</h1>
+            </div>
+      </div>
+      <div class="row">
+            <div class="col-md-12 text-center">
+                  <h3>All that's left is to send the cure to the president.</h3>
+            </div>
+      </div>
+      <div class="row top-buffer">
+            <div class="col-md-12 text-center">
+                  <h3>Send lucky number 7<sub>10</sub> by encoding the number in base</h3>
+            </div>
+      </div>
+      <div class="row">
+            <div class="col-md-12 text-center">
+                  <h3>2 (binary) on this circuit board</h3>
+            </div>
+      </div>
+      <div class="row top-buffer">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 text-center border">
+                  <h3 id="shownNum">0000<sub>2</sub></h3>
+            </div>
+            <div class="col-md-4"></div>
+      </div>
+      <div class="row top-buffer text-center">
+            <div class="col-md-3">
+                  <object id="bulb1" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
+            </div>
+            <div class="col-md-3">
+                  <object id="bulb2" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
+            </div>
+            <div class="col-md-3">
+                  <object id="bulb3" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
+            </div>
+            <div class="col-md-3">
+                  <object id="bulb4" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
+            </div>
+      </div>
+      <div class="row top-buffer text-center">
+            <div class="col-md-3">
+                  <button id="switch1" type="button"  onclick="toggle(bulb1, 0)" class="btn btn-secondary btn-small">Switch</button>
+            </div>
+            <div class="col-md-3">
+                  <button id="switch2" type="button"  onclick="toggle(bulb2, 1)" class="btn btn-secondary btn-small">Switch</button>
+            </div>
+            <div class="col-md-3">
+                  <button id="switch3" type="button"  onclick="toggle(bulb3, 2)" class="btn btn-secondary btn-small">Switch</button>
+            </div>
+            <div class="col-md-3">
+                  <button id="switch4" type="button"  onclick="toggle(bulb4, 3)" class="btn btn-secondary btn-small">Switch</button>
+            </div>
+      </div>
+      <div class="row top-buffer">
+            <div id="sendIt" class="col-md-12 text-center">
+                  <button type="button"  onclick="sendIt()" class="btn btn-secondary btn-lg btn-outline-warning">Send It</button>
+            </div>
+      </div>
+      <div class="row top-buffer">
+            <div class= "col-md-4">
+            </div>
+            <div class= "col-md-4 text-center">
+                  <button id="nextPage" type="button" onclick="nextPage()" class="btn btn-secondary btn-lg btn-outline-success hidden">Play Again!</button>
+                  <button id="tryagain" type="button" onclick="reset()" class="btn btn-secondary btn-lg btn-outline-success hidden">Try Again!</button>
+            </div>
+            <div class= "col-md-4">
+            </div>
+      </div>
+    </div> <!-- /container -->
+  </body>
+</html>

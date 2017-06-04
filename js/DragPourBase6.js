@@ -1,6 +1,6 @@
 
 
-var BASE = 2;
+var BASE = 6;
 
  var largevial = document.getElementById("largevial");
  var largeHeight = parseInt(largevial.getAttribute("height"));
@@ -14,7 +14,7 @@ var BASE = 2;
  document.getElementById("med-div").style.height = medHeight+30+"px";
  document.getElementById("med-div").style.width = medWidth+30+"px";
 
- var smallvial = document.getElementById("smallvial");
+ var svgDoc = document.getElementById("smallvial-object");
  var smallHeight = parseInt(smallvial.getAttribute("height"));
  var smallWidth = parseInt(smallvial.getAttribute("width"));
  document.getElementById("small-div").style.height = smallHeight+30+"px";
@@ -27,21 +27,21 @@ var medVial = 0
 // document.getElementById("medVialNum").textContent = medVial;
 var largeVial = 0
 // document.getElementById("largeVialNum").textContent = largeVial;
-var total = 115
+var total = 17
 
 
 function updateNumDisplays(){
   // document.getElementById("smallVialNum").textContent = smallVial;
   var vialFill = document.getElementById("Vial-Fill-Small");
-  vialFill.setAttribute("y", 200-smallVial*20)
+  vialFill.setAttribute("y", 120-smallVial*20)
 
   // document.getElementById("medVialNum").textContent = medVial;
   var vialFill = document.getElementById("Vial-Fill-Med");
-  vialFill.setAttribute("y", 200-medVial*20)
+  vialFill.setAttribute("y", 120-medVial*20)
 
   // document.getElementById("largeVialNum").textContent = largeVial;
   var vialFill = document.getElementById("Vial-Fill-Large");
-  vialFill.setAttribute("y", 200-largeVial*20)
+  vialFill.setAttribute("y", 120-largeVial*20)
 
   var vialFill = document.getElementById("totalVial");
   vialFill.innerHTML = total;
@@ -52,6 +52,10 @@ function fillSmallVial(){
     total--;
     smallVial++;
     updateNumDisplays();
+  }
+  console.log("Here");
+  if (total == 0) {
+    document.getElementById("success").className = "row";
   }
 }
 
@@ -129,7 +133,7 @@ interact('.draggable')
     restrict: {
       restriction: "parent",
       endOnly: true,
-      elementRect: { top: -0.9, left: 0, bottom: 10, right: 10}
+      elementRect: { top: -1.9, left: 0, bottom: 10, right: 10}
     },
     // enable autoScroll
     autoScroll: true,
