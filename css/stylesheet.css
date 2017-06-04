@@ -12,22 +12,228 @@
 	.sectionClass#div2 looks for something with both the class and id
 */
 
+a.svg {
+  position: relative;
+  display: inline-block; 
+}
+a.svg:after {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+}
+
+
+#centered-div {
+    width: 50%; /*can be in percentage also.*/
+    height: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+button{
+    
+}
+
+#scene-box img{
+  width: 100%;
+  height: 100%;
+}
+
+p {
+	color: red;
+}
+
+.template {
+  background-color: #696969;
+}
+
+.chapter {
+  height: 40px;
+}
+
+#gameTitle{
+  color: white;
+  font-size: 30pt;
+  margin: 10px;
+  margin-bottom: 10px;
+}
 
 .sectionClass {
 	font-family: 'Source Sans Pro', sans-serif;
 	color: blue;
 }
 
-
 #div1 {
 	color: green;
+}
+
+#drag-1, #drag-2 {
+  width: 25%;
+  height: 100%;
+  min-height: 6.5em;
+  margin: 10%;
+
+  background-color: #29e;
+  color: white;
+
+  border-radius: 0.75em;
+  padding: 4%;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+#drag-me::before {
+  content: "#" attr(id);
+  font-weight: bold;
+}
+
+
+#unmovable {
+  width: 25%;
+  height: 100%;
+  min-height: 6.5em;
+  margin: 10%;
+
+  background-color: #29e;
+  color: white;
+
+  border-radius: 0.75em;
+  padding: 4%;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+#outer-dropzone {
+  height: 140px;
+}
+
+#inner-dropzone {
+  height: 500px;
+}
+
+.dropzone {
+  display: inline-block;
+
+  border: dashed 4px transparent;
+  border-radius: 4px;
+/*  margin: 10px auto 30px;*/
+  padding: 10px;
+  width: 40%;
+  transition: background-color 0.3s;
+}
+
+.drop-active {
+  border-color: #aaa;
+}
+
+.drop-target {
+  background-color: #29e;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.drag-drop {
+  display: inline-block;
+  min-width: 40px;
+  padding: 2em 0.5em;
+/*
+  color: #fff;
+  background-color: #29e;
+  border: solid 2px #fff;*/
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+
+  transition: background-color 0.3s;
+}
+
+svg {
+    z-index: -1;
+}
+
+.vial {
+    position: absolute;
+    bottom: 0;
+}
+
+#small-div {
+  height: 210px;
+  width: 50px;
+}
+
+/*#med-div {
+  height: 210px;
+  width: 50px;
+}*/
+
+
+
+#smallvial {
+    position: relative;
+    left: -200;
+    top: 0;
+    z-index: 1;
+}
+
+#faucet {
+  position: relative;
+  z-index: 2;
+}
+
+.drag-drop.draggable {
+/*  padding-bottom: 40px;
+*/}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #4e4;
+}
+
+
+
+/*
+*
+*
+*
+* DUPLICATES AFTER THIS POINT
+*
+*
+*
+*/
+
+#description{
+  color: white;
+  font-size: 12pt;
+}
+
+#gameTitle{
+  color: white;
+  font-size: 30pt;
+  margin: 10px;
+  margin-bottom: 10px;
+}
+
+.sectionClass {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: blue;
+}
+
+
+#div1 {
+  color: green;
 }
 
 
 /* Defines CSS for the directions at top
  * of scene box*/
 .direction {
-    margin-top: -10%;
+    margin-top: 0%;
     text-align:center;
 }
 
@@ -107,12 +313,12 @@ font-size: 1.em;
 #scene-box {
     border: 3px solid #ccc;
     height: 80vh;
-    margin-top:10%;
     padding:10px;
-    /*padding-top:20%;*/
-    padding:5%;
-    padding-top:10%;
+    background-color: #ffffff;
+    /*padding-top:20%;*/]
 }
+
+
 
 .border-bot {
     border-bottom: double;
