@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Equal Parts</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet_arrowkey.css">
+      	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="http://code.interactjs.io/v1.2.6/interact.min.js" defer></script>
+		<script src="js/equal_parts.js" defer></script>
+	</head>
+ <body>
+ <div class="container">
+     <div id="scene-box">
+        <div class="row direction">
+            <div class="col-md-12 ">
+                <p class="scidirection">Combine <i>exactly equal</i> parts of Formula A and Formula B to create the final anecedote.</p>
+            </div>
+        </div>
+        <div class="row formualtitles">
+            <div class="col-md-6  text-center">
+                <p class="form-text"> <b>020<sub>3</sub></b> Formula A</p>
+            </div> 
+            <div class="col-md-6  text-center">
+                <p class="form-text"> <b>013<sub>4</sub></b> Formula B</p>
+            </div> 
+        </div>
+         <div  class="row vialrow">
+            <div id="large-vial-col-A" class="col-md-2">
+                <!--<object id="large-vial-obj" data="images/large.svg" type="image/svg+xml">-->
+               <object id="large-vial-obj-A" data="images/large-base4.svg" type="image/svg+xml">
+               </object>
+               <p id="large-math-A">0 x 9 = <b>0</b></p>
+            </div>
+            <div id="med-vial-col-A" class="col-md-2">
+               <object id="med-vial-obj-A" data="images/med-base4.svg" type="image/svg+xml">
+               </object>
+               <p id="med-math-A">0 x 3 = <b>0</b></p>
+            </div>
+            <div id="small-vial-col-A" class="col-md-1">
+               <object id="small-vial-obj-A" data="images/small-base4.svg" type="image/svg+xml">
+               </object>
+               <p id="small-math-A">0 x 1 = <b>0</b></p>
+            </div>
+            <div class="col-md-2">
+                &nbsp;
+            </div>
+            <div id="large-vial-col-B" class="col-md-2">
+                <!--<object id="large-vial-obj" data="images/large.svg" type="image/svg+xml">-->
+               <object id="large-vial-obj-B" data="images/large-base4.svg" type="image/svg+xml">
+               </object>
+               <p id="large-math-B">0 x 16 = <b>0</b></p>
+            </div>
+            <div id="med-vial-col-B" class="col-md-2">
+               <object id="med-vial-obj-B" data="images/med-base4.svg" type="image/svg+xml">
+               </object>
+               <p id="med-math-B">0 x 4 = <b>0</b></p>
+            </div>
+            <div id="small-vial-col-B" class="col-md-1">
+               <object id="small-vial-obj-B" data="images/small-base4-equal.svg" type="image/svg+xml">
+               </object>
+               <p id="small-math-B">0 x 1 = <b>0</b></p>
+            </div>
+        </div>
+        <div id="button-row" class="row">
+            <p id="message"><p>
+        </div>
+        <div id="question-row" class="row">
+            <div class="col-md-4">
+                &nbsp;
+            </div>
+            <div class="col-md-4 text-center">
+                <p id="question-text">Are these equal?</p>
+                <div class = "row">
+                    <div id="equal-correct" class="col-md-12">
+                        GOOD CATCH! An unequal amount would have blown up the lab...
+                        <div class="row center">
+                            <div class = "col-md-12">
+                                <button id="continue" type="button" class="btn btn-secondary" onclick="nextPage()">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="equal-wrong" class="col-md-12">
+                        NOOOOOO! Quick, try again before the lab explodes!
+                        <div class="row center">
+                            <div class = "col-md-12">
+                                <button id="try-again" type="button" class="btn btn-secondary" onclick="reset()">Try Again</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pull-right ">
+                        <button id="button-no" type="button" class="btn btn-secondary" onclick="guessedYes()">Yes</button>
+                    </div>
+                    <div class="col-md-6 pull-right">
+                        <button id="button-yes" type="button" class="btn btn-secondary" onclick="guessedNo()">No</button>
+                    </div>
+               </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+ </div>
+ </body>
+</html>
