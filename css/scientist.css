@@ -9,7 +9,7 @@
 img#speechbubble  {
   position:absolute;
   z-index:2;
-  top:50px; left:350px;
+  top:10%; left:30%;
   width: 550px;
   height: auto;
 }
@@ -17,7 +17,7 @@ img#speechbubble  {
 #speechtext  {
   position:absolute;
   z-index:3;
-  top:65px; left:475px;
+  top:12%; left:40%;
   width: 400px;
   height: 250px;
   font-size: 20pt;
@@ -28,7 +28,7 @@ img#speechbubble  {
 #clicktocontinue {
   position:absolute;
   z-index:3;
-  top:550px; left:475px;
+  top:90%; left:45%;
   width: 400px;
   height: 250px;
   font-size: 20pt;
