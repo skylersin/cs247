@@ -15,6 +15,23 @@
     visibility:hidden;
 }
 
+#num1 {
+    font-size:4em;
+    color: #000000 !important;
+}
+
+#num2 {
+    font-size:4em;
+    color: #979797 !important;
+}
+
+.equal-q {
+    font-size: 3em;
+}
+
+.buttons-here{
+    padding-left:30%;
+}
 
 .custom-cont-button {
     display:inline-block;

@@ -4,7 +4,7 @@
 		<title>Add and Subtract</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-		<link rel="stylesheet" type="text/css" href="css/addsubtract.css">
+		<link rel="stylesheet" type="text/css" href="addsubtract.css">
       	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -61,31 +61,25 @@
                         <h2>Add or subtract from 020<sub>3</sub> so it equals 013<sub>7</sub></h2>
                   </div>
             </div>
-            <div class="row  top-buffer">
-                  <div class = "col-md-4 text-right">
+            <div class="row  top-buffer-numbers">
+                  <div class = "col-md-5 text-right">
                         <h2 id="num1" class="text-danger">020<sub>3</sub></h2>
-                  </div>
-                  <div class = "col-md-4">
-                  </div>
-                  <div class = "col-md-4 text-left">
-                        <h2 class="text-success">013<sub>7</sub></h2>
-                  </div>
-            </div>
-            <div class="row">
-                  <div class = "col-md-4">
-                        <div class="row">
-                              <div class="col-md-12 text-right">
-                                    <button id="add" type="button"  onclick="addNum1()" class="btn btn-secondary btn-small">Add</button>
-                                    <button id="subtract" type="button"  onclick="subtractNum1()" class="btn btn-secondary btn-small">Subtract</button>
-                              </div>
-<!--                               <div class="col-md-6 text-left">
-                                    <button id="checkanswer" type="button"  onclick="checkAnswer()" class="btn btn-secondary btn-small">Subtract</button>
-                              </div> -->
+                            <div class="row buttons-here">
+                                <div class = "col-md10 offset-md-2">
+                                    <button id="add" type="button" onclick="addNum1()" class="custom-cont-button">
+                                    <img src="images/Add.svg" width="90"/>
+                                </button>
+                                    <button id="subtract" type="button" onclick="subtractNum1()" class="custom-cont-button">
+                                    <img src="images/Subtract.svg" width="90"/>
+                                </button>
+                            </div>
                         </div>
                   </div>
-                  <div class = "col-md-4">
+                  <div class = "col-md-3 text-center">
+                      <p class= "equal-q">=?</p>
                   </div>
-                  <div class = "col-md-4">
+                  <div class = "col-md-4 text-left">
+                        <h2 id="num2" class="text-success">013<sub>7</sub></h2>
                   </div>
             </div>
             <div class="row top-buffer">
@@ -96,12 +90,16 @@
             </div>
             <div class="row top-buffer">
                   <div class="col-md-12 text-center">
-                        <button id="checkanswer" type="button"  onclick="checkAnswer()" class="btn btn-secondary btn-lg">Check Answer</button>
+                        <button id="checkanswer" type="button" onclick="checkAnswer()" class="custom-cont-button">
+                            <img src="images/check-answer.svg" width="170"/>
+                        </button>
                   </div>
             </div>
             <div class="row">
                   <div class= "col-md-12 text-center">
-                        <button id="continue" type="button"  onclick="nextPage()" class="btn btn-secondary btn-lg btn-outline-success hidden">Continue</button>
+                        <button id="continue" type="button" onclick="nextPage()" class="custom-cont-button">
+                        <img src="images/continue-button.svg" width="170"/>
+                    </button>
                   </div>
             </div>
           </div>
