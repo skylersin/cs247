@@ -6,10 +6,18 @@
     font-size: 2em;
     color: #55B26B;
     text-align:center;
+    font-weight:bold;
 }
 
 .explanation-text {
     font-size:1.2em;
+}
+
+#height-notice {
+    margin-bottom:0%;
+    margin-left:10%;
+    padding-left:7%;
+    padding-top: 10%;
 }
 
 .explanation-subhead {
@@ -22,6 +30,17 @@
 }
 
 .vial-img {
+}
+
+#base-title{
+    padding-bottom: 0%;
+    margin-top: 5%;
+}
+
+#base-expl {
+    padding-top: 0%;
+    margin-top: 0%;
+    margin-bottom:0%;
 }
 
 .custom-cont-button {
