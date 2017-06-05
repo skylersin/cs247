@@ -2,6 +2,7 @@ document.getElementById("chapter1").addEventListener("mouseover", function(){
     document.getElementById("chapter1-svg").data = "images/Chapter-1-Highlight.svg";
     document.getElementById("description").textContent = "In this chapter you awaken in a lab to find the world is in trouble. Learn what you can do.";
     document.getElementById("description").style.visibility = "visible";
+    updateText();
 });
 document.getElementById("chapter1").addEventListener("mouseout", function(){
     document.getElementById("chapter1-svg").data = "images/Chapter-1.svg";
