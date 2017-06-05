@@ -7,7 +7,7 @@ function addNum1() {
 	num1 += 1;
 	num1base3 = convertBase(num1, 3);
 	var image = document.getElementById("num1");
-	image.innerHTML = "=" + num1base3+"<sub>3</sub>";
+	image.innerHTML ="0"+num1base3+"<sub>3</sub>";
 }
 
 function addNum2() {
@@ -15,7 +15,7 @@ function addNum2() {
 	num2base7 = convertBase(num2, 7);
 	var image = document.getElementById("num2");
 	console.log(image);
-	image.innerHTML = "=" + num2base7+"<sub>7</sub>";
+	image.innerHTML ="0"+num2base7+"<sub>7</sub>";
 }
 
 function subtractNum1() {
@@ -23,7 +23,7 @@ function subtractNum1() {
 		num1 -= 1;
 		num1base3 = convertBase(num1, 3);
 		var image = document.getElementById("num1");
-		image.innerHTML = "=" + num1base3+"<sub>3</sub>";
+		image.innerHTML ="0"+num1base3+"<sub>3</sub>";
 	}
 }
 
@@ -55,7 +55,8 @@ function checkAnswer() {
 		var html = document.getElementById("answer");
 		html.innerHTML = "Correct! These are both " + num1+"<sub>10</sub>"; 
 		var html = document.getElementById("continue");
-		html.className = "btn btn-secondary btn-lg "
+		html.className = "btn btn-secondary btn-lg btn-outline-success ";
+		document.getElementById("checkanswer").className = "hidden";
 	} else {
 		var html = document.getElementById("answer");
 		html.innerHTML = "Wrong Answer! Try Again!";
