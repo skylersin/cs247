@@ -68,7 +68,7 @@ function fillSmallVial(){
 
 function showSuccess() {
   document.getElementById("success").className = "row";
-  document.getElementById("dialogue").innerHTML = "You did it! Continue to next page for full explanation!";
+  document.getElementById("dialogue").innerHTML = "You did it again! Wow! <br> Let's go over what you just did!";
   document.getElementById("dialogue").className = "text-success";
   done = 1;
 }

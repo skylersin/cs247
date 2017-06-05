@@ -4,6 +4,8 @@ var BASE = 10;
 var total = 103;
 var done = 0;
 
+let link = "Chapter2-3.html";
+
  var largevial = document.getElementById("largevial");
  var largeHeight = parseInt(largevial.getAttribute("height"));
  var largeWidth = parseInt(largevial.getAttribute("width"));
@@ -198,6 +200,9 @@ interact('.draggable')
   // this is used later in the resizing and gesture demos
   window.dragMoveListener = dragMoveListener;
 
+function nextPage(){
+  window.location = link;
+}
 
 
 
