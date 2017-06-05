@@ -9,6 +9,7 @@ var Time_Index = 10;
 let Tutorial_Length = 15;
 
 let FilePath = "images/tutorial/t";
+let link = "Chapter1-3.html"
 
 document.getElementById("clicktocontinue").style.visibility = "hidden";
 
@@ -53,7 +54,7 @@ function displayPage(){
 
 //Redirects Page When Explanation Is Done
 function redirectPage () {
-	window.location = "Chapter1-Start.html";
+	window.location = link;
 }
 
 

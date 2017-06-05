@@ -2,7 +2,7 @@
   background-color: #464646;
 }
 
-#gameTitle{
+h2#gameTitle{
   color: #89F678;
   font-size: 30pt;
   margin: 10px;
@@ -10,7 +10,7 @@
   font-family: BebasNeue;
 }
 
-#description{
+p#description{
   color: #FFE100;
   font-size: 12pt;
 }
