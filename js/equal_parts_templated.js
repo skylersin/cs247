@@ -306,7 +306,15 @@ function nextPage(){
     console.log("go to the next page here");
 }
 
-function set_vial_attrib(svgDoc, thisVialAmount){
+function set_vial_attrib_A(svgDoc, thisVialAmount){
+  if(thisVialAmount != 0){
+     svgDoc.getElementById("Vial-Fill").setAttribute("y", 70-thisVialAmount*20);
+  } else{
+     svgDoc.getElementById("Vial-Fill").setAttribute("y", 80-thisVialAmount*20);
+  }
+}
+
+function set_vial_attrib_B(svgDoc, thisVialAmount){
   if(thisVialAmount != 0){
      svgDoc.getElementById("Vial-Fill").setAttribute("y", 90-thisVialAmount*20);
   } else{
@@ -317,27 +325,27 @@ function set_vial_attrib(svgDoc, thisVialAmount){
 function updateVials(){
    var thisVialAmount = vialAmounts[0];
    var svgDoc = document.getElementById("small-vial-obj-A").contentDocument 
-   set_vial_attrib(svgDoc, thisVialAmount);
+   set_vial_attrib_A(svgDoc, thisVialAmount);
 
   thisVialAmount = vialAmounts[1];
   svgDoc = document.getElementById("med-vial-obj-A").contentDocument 
-   set_vial_attrib(svgDoc, thisVialAmount);
+   set_vial_attrib_A(svgDoc, thisVialAmount);
  
   thisVialAmount = vialAmounts[2];
   svgDoc = document.getElementById("large-vial-obj-A").contentDocument 
-   set_vial_attrib(svgDoc, thisVialAmount);
+   set_vial_attrib_A(svgDoc, thisVialAmount);
  
    var thisVialAmount = vialAmounts[3];
    var svgDoc = document.getElementById("small-vial-obj-B").contentDocument 
-   set_vial_attrib(svgDoc, thisVialAmount);
+   set_vial_attrib_B(svgDoc, thisVialAmount);
 
   thisVialAmount = vialAmounts[4];
   svgDoc = document.getElementById("med-vial-obj-B").contentDocument 
-   set_vial_attrib(svgDoc, thisVialAmount);
+   set_vial_attrib_B(svgDoc, thisVialAmount);
  
   thisVialAmount = vialAmounts[5];
   svgDoc = document.getElementById("large-vial-obj-B").contentDocument 
-   set_vial_attrib(svgDoc, thisVialAmount);
+   set_vial_attrib_B(svgDoc, thisVialAmount);
 
 }
 

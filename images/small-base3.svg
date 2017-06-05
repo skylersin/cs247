@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="75px" viewBox="0 0 50 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Small Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-8-Copy-5" transform="translate(-473.000000, -555.000000)">
+            <g id="Group-2-Copy-4" transform="translate(472.000000, 555.000000)">
+                <g id="Small-Copy-2" transform="translate(0.696078, 0.000000)">
+                    <g id="Small">
+                        <rect id="Highlight" stroke="#97FF93" stroke-width="2" x="1.30392157" y="1" width="48" height="73" visibility="visible"></rect>
+                        <rect id="Vial-Fill" fill="#97FF93" x="5.30392157" y="90" width="40" height="1000"></rect>
+                        <rect id="Vial-Outline" stroke="#000000" stroke-width="3.75" x="7.17892157" y="6.875" width="36.25" height="66.25"></rect>
+                    </g>
+                    <g id="Measurment-Small" transform="translate(8.000000, 20.000000)" fill="#000000">
+                        <rect id="Rectangle-4-Copy" x="17.3039216" y="25" width="20" height="5"></rect>
+                        <rect id="Rectangle-4-Copy-10" x="17.3039216" y="5" width="20" height="5"></rect>
+                        <text id="1" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
+                            <tspan x="7.57734388" y="34">1</tspan>
+                        </text>
+                        <text id="2" font-family="Futura-Medium, Futura" font-size="12.5" font-weight="400" letter-spacing="-5.56560993">
+                            <tspan x="7.57734388" y="13">2</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
