@@ -14,7 +14,7 @@ let link = "Chapter4-2.html";
 let images = [["images/Scientist-Closed.png", "images/Scientist-Open.png"],["images/Scientist-Closed-Arm.png", "images/Scientist-Open-Arm.png"]]
 let text = ["It's time to save the world! There's no more time for practice. We need you now more than ever.",
 	"We have two solutions that are in different bases and need to know if they are equal in amount.",
-	"We need to mix them for the antidote. However, if they aren't our lab could blow up when we mix them.",
+	"We need to mix them for the antidote. However, if they aren't equal our lab could blow up when we mix them.",
 	"Our lives and the lives of everyone in the world depend on you. No pressure..."];
 
 document.getElementById("speechbubble").style.visibility = "hidden";

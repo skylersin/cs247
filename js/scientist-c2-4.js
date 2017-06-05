@@ -12,7 +12,7 @@ var Time_Index = 0;
 
 let link = "Chapter2-5.html";
 let images = [["images/Scientist-Closed.png", "images/Scientist-Open.png"],["images/Scientist-Closed-Arm.png", "images/Scientist-Open-Arm.png"]]
-let text = ["Great job with base 10! However now is where things get tricky...",
+let text = ["Great job with base 10! However, now is where things get tricky...",
 	"We need to measure that same amount of liquid with base 6 vials",
 	"Instead of each vials being powers of 10, they will now be powers of 6.",
 	"This is where we hope you can help us. We have been struggling for a while to figure this out."];

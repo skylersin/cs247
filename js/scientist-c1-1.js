@@ -12,7 +12,7 @@ var Time_Index = 0;
 
 let link = "Chapter1-2.html";
 let images = [["images/Scientist-Closed.png", "images/Scientist-Open.png"],["images/Scientist-Closed-Arm.png", "images/Scientist-Open-Arm.png"]]
-let text = ["Oh! You're Awake... Thank Goodness!",
+let text = ["Oh! You're Awake... Thank goodness!",
 	"Hi. I am Scientist Bob. There has been an emergency!",
 	"The world has been hit with a deadly virus. We need your help to stop it!",
 	"You see we aren't so good with our bases and have been struggling to make a vaccine.",

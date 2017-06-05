@@ -16,7 +16,7 @@ let text = ["I see you grabbed your labcoat. I hope you are as ready as you look
 	"For the past 2 weeks my team of scientists have been working to create a cure for this recent outbreak.",
 	"So far we have not been successful. We just cannot seem to get our bases right.",
 	"We need you to help us measure out some solution, however some of the measurements will be in different bases.",
-	"You will start out with Base 10 vials. This is what you were just playing around with.",
+	"You will start out with base 10 vials. This is what you were just playing around with.",
 	"We need to pour 103 in base 10 units into our base 10 vials. Let's do it!"];
 
 let text5 = ["OK.. YOU GOT BASE 10 DOWN - DANG",
