@@ -182,10 +182,6 @@ img#speechbubble  {
   transition: background-color 0.3s;
 }
 
-svg {
-    z-index: -1;
-}
-
 .vial {
     position: absolute;
     bottom: 0;
@@ -437,10 +433,6 @@ font-size: 1.em;
           transform: translate(0px, 0px);
 
   transition: background-color 0.3s;
-}
-
-svg {
-    z-index: -1;
 }
 
 .vial {

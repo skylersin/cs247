@@ -1,8 +1,9 @@
-.scene-box {
+.drag-pour {
     border: 3px solid #ccc;
     margin-top:2.5%;
     padding-top:2.5%;
     padding-bottom: 2.5%;
+    background-color: white;
 }
 
 .top-buffer { margin-top:20px; }
@@ -11,3 +12,11 @@
   display: none !important;
   visibility: hidden !important;
 }
+
+/*.red-text {
+	color: red;
+}
+
+.black-text {
+	color: black;
+}*/

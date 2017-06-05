@@ -1,7 +1,8 @@
 
 
 var BASE = 10;
-var total = 112
+var total = 103;
+var done = 0;
 
  var largevial = document.getElementById("largevial");
  var largeHeight = parseInt(largevial.getAttribute("height"));
@@ -27,7 +28,9 @@ document.getElementById("smallVialNum").innerHTML = smallVial;
 var medVial = 0
 document.getElementById("medVialNum").innerHTML = medVial;
 var largeVial = 0
-// document.getElementById("largeVialNum").innerHTML = largeVial;
+document.getElementById("largeVialNum").innerHTML = largeVial;
+var vialFill = document.getElementById("totalVial");
+vialFill.innerHTML = total;
 
 
 function updateNumDisplays(){
@@ -52,7 +55,34 @@ function fillSmallVial(){
     total--;
     smallVial++;
     updateNumDisplays();
+    if (total == 0 && smallVial != BASE) {
+      showSuccess();
+    }
   }
+  if (done != 1) {
+    if (smallVial % BASE == 0) {
+      showDragMessage();
+    } else {
+      showFillMessage();
+    }
+  }
+}
+
+function showSuccess() {
+  document.getElementById("success").className = "row";
+  document.getElementById("dialogue").innerHTML = "You did it! Notice how each vial is a different place digit? <br> Continue to next page for full explanation!";
+  document.getElementById("dialogue").className = "text-success";
+  done = 1;
+}
+
+function showFillMessage() {
+  document.getElementById("dialogue").innerHTML = "Keep filling the small vial <br> by clicking on the faucet number!";
+  document.getElementById("dialogue").className = "text";
+}
+
+function showDragMessage() {
+  document.getElementById("dialogue").innerHTML = "The small vial's full! <br> Drag the small vial to the medium vial!";
+  document.getElementById("dialogue").className = "text-danger";
 }
 
 function makeVialDraggable(){
@@ -103,8 +133,12 @@ interact('.dropzone').dropzone({
       medVial += 1;
       smallVial = 0;
       updateNumDisplays();
+      showFillMessage();
       if (medVial == BASE) {
         makeVialDraggable();
+      }
+      if (total == 0) {
+        showSuccess();
       }
     } else if (medVial == BASE) {
       emptyMedVial();
@@ -129,7 +163,7 @@ interact('.draggable')
     restrict: {
       restriction: "parent",
       endOnly: true,
-      elementRect: { top: -0.7, left: 0, bottom: 10, right: 10}
+      elementRect: { top: -0.3, left: 0, bottom: 10, right: 10}
     },
     // enable autoScroll
     autoScroll: true,
