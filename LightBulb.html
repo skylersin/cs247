@@ -10,78 +10,121 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<script src="js/lightbulb.js" defer></script>
 	</head>
- <body>
-    <div class="container scene-box">
-      <div class="row">
-            <div class="col-md-12 text-center">
-                  <h1>Yes! The antidote worked!</h1>
+      <body class="template">
+          <div class="container" id="templatebackground">
+            <!-- Content here -->
+            <div class="row">
+                <div class="col" align="center">
+                    <h2 id="gameTitle">Science Of Bases </h2>
+                </div>
             </div>
-      </div>
-      <div class="row">
-            <div class="col-md-12 text-center">
-                  <h3>All that's left is to send the cure to the president.</h3>
+            <div class="row">
+              <div class="col-md-2" align="center">
+              </div>
+                <div class="col-md-2" align="center">
+                  <a href="Chapter1-Start.html" class="svg" id="chapter1">
+                    <object class="chapter" id="chapter1-svg" data="images/Chapter-1.svg" type="image/svg+xml">
+                    </object>
+                  </a>
+                </div>
+                <div class="col-md-2" align="center">
+                  <a href="Chapter2-Start.html" class="svg" id="chapter2">
+                    <object class="chapter" id="chapter2-svg" data="images/Chapter-2.svg" type="image/svg+xml">
+                    </object>
+                  </a>
+                </div>
+                <div class="col-md-2" align="center">
+                  <a href="Chapter3-Start.html" class="svg" id="chapter3">
+                    <object class="chapter" id="chapter3-svg" data="images/Chapter-3.svg" type="image/svg+xml">
+                    </object>
+                  </a>
+                </div>
+                <div class="col-md-2" align="center">
+                  <a href="Chapter4-Start.html" class="svg" id="chapter4">
+                    <object class="chapter" id="chapter4-svg" data="images/Chapter-4.svg" type="image/svg+xml">
+                    </object>
+                  </a>
+                </div>
+                <div class="col-md-2" align="center">
+              </div>
             </div>
-      </div>
-      <div class="row top-buffer">
-            <div class="col-md-12 text-center">
-                  <h3>Send lucky number 7<sub>10</sub> by encoding the number in base</h3>
+            <div class="row">
+                <div class="col" align="center">
+                    <p id="description"> Hover over the Chapters to see a description</p>
+                </div>
             </div>
-      </div>
-      <div class="row">
-            <div class="col-md-12 text-center">
-                  <h3>2 (binary) on this circuit board</h3>
+            <div id="scene-box" class="container">
+                  <div class="row">
+                        <div class="col-md-12 text-center">
+                              <h1>Yes! The antidote worked!</h1>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-md-12 text-center">
+                              <h3>All that's left is to send the cure to the president.</h3>
+                        </div>
+                  </div>
+                  <div class="row top-buffer">
+                        <div class="col-md-12 text-center">
+                              <h3>Send lucky number 7<sub>10</sub> by encoding the number in base</h3>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-md-12 text-center">
+                              <h3>2 (binary) on this circuit board</h3>
+                        </div>
+                  </div>
+                  <div class="row top-buffer">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4 text-center border">
+                              <h3 id="shownNum">0000<sub>2</sub></h3>
+                        </div>
+                        <div class="col-md-4"></div>
+                  </div>
+                  <div class="row top-buffer text-center">
+                        <div class="col-md-3">
+                              <object id="bulb1" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
+                        </div>
+                        <div class="col-md-3">
+                              <object id="bulb2" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
+                        </div>
+                        <div class="col-md-3">
+                              <object id="bulb3" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
+                        </div>
+                        <div class="col-md-3">
+                              <object id="bulb4" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
+                        </div>
+                  </div>
+                  <div class="row top-buffer text-center">
+                        <div class="col-md-3">
+                              <button id="switch1" type="button"  onclick="toggle(bulb1, 0)" class="btn btn-secondary btn-small">Switch</button>
+                        </div>
+                        <div class="col-md-3">
+                              <button id="switch2" type="button"  onclick="toggle(bulb2, 1)" class="btn btn-secondary btn-small">Switch</button>
+                        </div>
+                        <div class="col-md-3">
+                              <button id="switch3" type="button"  onclick="toggle(bulb3, 2)" class="btn btn-secondary btn-small">Switch</button>
+                        </div>
+                        <div class="col-md-3">
+                              <button id="switch4" type="button"  onclick="toggle(bulb4, 3)" class="btn btn-secondary btn-small">Switch</button>
+                        </div>
+                  </div>
+                  <div class="row top-buffer">
+                        <div id="sendIt" class="col-md-12 text-center">
+                              <button type="button"  onclick="sendIt()" class="btn btn-secondary btn-lg btn-outline-warning">Send It</button>
+                        </div>
+                  </div>
+                  <div class="row top-buffer">
+                        <div class= "col-md-4">
+                        </div>
+                        <div class= "col-md-4 text-center">
+                              <button id="nextPage" type="button" onclick="nextPage()" class="btn btn-secondary btn-lg btn-outline-success hidden">Play Again!</button>
+                              <button id="tryagain" type="button" onclick="reset()" class="btn btn-secondary btn-lg btn-outline-success hidden">Try Again!</button>
+                        </div>
+                        <div class= "col-md-4">
+                        </div>
+                  </div>
             </div>
-      </div>
-      <div class="row top-buffer">
-            <div class="col-md-4"></div>
-            <div class="col-md-4 text-center border">
-                  <h3 id="shownNum">0000<sub>2</sub></h3>
-            </div>
-            <div class="col-md-4"></div>
-      </div>
-      <div class="row top-buffer text-center">
-            <div class="col-md-3">
-                  <object id="bulb1" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
-            </div>
-            <div class="col-md-3">
-                  <object id="bulb2" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
-            </div>
-            <div class="col-md-3">
-                  <object id="bulb3" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
-            </div>
-            <div class="col-md-3">
-                  <object id="bulb4" data="images/LightBulbOff.svg" type="image/svg+xml"></object>
-            </div>
-      </div>
-      <div class="row top-buffer text-center">
-            <div class="col-md-3">
-                  <button id="switch1" type="button"  onclick="toggle(bulb1, 0)" class="btn btn-secondary btn-small">Switch</button>
-            </div>
-            <div class="col-md-3">
-                  <button id="switch2" type="button"  onclick="toggle(bulb2, 1)" class="btn btn-secondary btn-small">Switch</button>
-            </div>
-            <div class="col-md-3">
-                  <button id="switch3" type="button"  onclick="toggle(bulb3, 2)" class="btn btn-secondary btn-small">Switch</button>
-            </div>
-            <div class="col-md-3">
-                  <button id="switch4" type="button"  onclick="toggle(bulb4, 3)" class="btn btn-secondary btn-small">Switch</button>
-            </div>
-      </div>
-      <div class="row top-buffer">
-            <div id="sendIt" class="col-md-12 text-center">
-                  <button type="button"  onclick="sendIt()" class="btn btn-secondary btn-lg btn-outline-warning">Send It</button>
-            </div>
-      </div>
-      <div class="row top-buffer">
-            <div class= "col-md-4">
-            </div>
-            <div class= "col-md-4 text-center">
-                  <button id="nextPage" type="button" onclick="nextPage()" class="btn btn-secondary btn-lg btn-outline-success hidden">Play Again!</button>
-                  <button id="tryagain" type="button" onclick="reset()" class="btn btn-secondary btn-lg btn-outline-success hidden">Try Again!</button>
-            </div>
-            <div class= "col-md-4">
-            </div>
-      </div>
-    </div> <!-- /container -->
-  </body>
+          </div>
+      </body>
 </html>
