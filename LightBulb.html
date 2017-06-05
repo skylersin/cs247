@@ -54,24 +54,24 @@
                 </div>
             </div>
             <div id="scene-box" class="container">
-                  <div class="row">
+                  <div id="fluff-1" class="row">
                         <div class="col-md-12 text-center">
                               <h1>Yes! The antidote worked!</h1>
                         </div>
                   </div>
-                  <div class="row">
+                  <div id="fluff-2" class="row">
                         <div class="col-md-12 text-center">
-                              <h3>All that's left is to send the cure to the president.</h3>
+                              <h4>We have to tell the president that we have the cure.</h4>
                         </div>
                   </div>
                   <div class="row top-buffer">
                         <div class="col-md-12 text-center">
-                              <h3>Send lucky number 7<sub>10</sub> by encoding the number in base</h3>
+                              <h4>Send lucky number 7<sub>10</sub> by encoding the number in base</h4>
                         </div>
                   </div>
                   <div class="row">
                         <div class="col-md-12 text-center">
-                              <h3>2 (binary) on this circuit board</h3>
+                              <h4>2 (binary) on this circuit board</h4>
                         </div>
                   </div>
                   <div class="row top-buffer">
@@ -97,31 +97,46 @@
                   </div>
                   <div class="row top-buffer text-center">
                         <div class="col-md-3">
-                              <button id="switch1" type="button"  onclick="toggle(bulb1, 0)" class="btn btn-secondary btn-small">Switch</button>
+                            <button id="switch1" type="button" onclick="toggle(bulb1, 0)" class="custom-cont-button">
+                                <img id="img0" src="images/OffSwitch.svg" width="90"/>
+                            </button>
+
                         </div>
                         <div class="col-md-3">
-                              <button id="switch2" type="button"  onclick="toggle(bulb2, 1)" class="btn btn-secondary btn-small">Switch</button>
+                            <button id="switch2" type="button" onclick="toggle(bulb2, 1)" class="custom-cont-button">
+                                <img id="img1" src="images/OffSwitch.svg" width="90"/>
+                            </button>
                         </div>
                         <div class="col-md-3">
-                              <button id="switch3" type="button"  onclick="toggle(bulb3, 2)" class="btn btn-secondary btn-small">Switch</button>
+                            <button id="switch3" type="button" onclick="toggle(bulb3, 2)" class="custom-cont-button">
+                                <img id="img2" src="images/OffSwitch.svg" width="90"/>
+                            </button>
                         </div>
                         <div class="col-md-3">
-                              <button id="switch4" type="button"  onclick="toggle(bulb4, 3)" class="btn btn-secondary btn-small">Switch</button>
+                            <button id="switch4" type="button" onclick="toggle(bulb4, 3)" class="custom-cont-button">
+                                <img id="img3" src="images/OffSwitch.svg" width="90"/>
+                            </button>
                         </div>
                   </div>
                   <div class="row top-buffer">
                         <div id="sendIt" class="col-md-12 text-center">
-                              <button type="button"  onclick="sendIt()" class="btn btn-secondary btn-lg btn-outline-warning">Send It</button>
-                        </div>
+                            <div id="message" class="row">  
+                                <h3 id="message-txt">Rats! You killed the president.</h3>
+                            </div>
+                            <button id="send-button" type="button" onclick="sendIt()" class="custom-cont-button">
+                                <img src="images/send-button.svg" width="170"/>
+                            </button>
+                      </div>
                   </div>
                   <div class="row top-buffer">
-                        <div class= "col-md-4">
-                        </div>
-                        <div class= "col-md-4 text-center">
-                              <button id="nextPage" type="button" onclick="nextPage()" class="btn btn-secondary btn-lg btn-outline-success hidden">Play Again!</button>
-                              <button id="tryagain" type="button" onclick="reset()" class="btn btn-secondary btn-lg btn-outline-success hidden">Try Again!</button>
-                        </div>
-                        <div class= "col-md-4">
+                        <div class= "col-md-12 text-center">
+                            <!--<button id="nextPage" type="button" onclick="nextPage()" class="btn btn-secondary btn-lg btn-outline-success hidden">Play Again!</button>-->
+                            <button id="nextPage" type="button" onclick="nextPage()" class="custom-cont-button">
+                              <img src="images/play-again.svg" width="170"/>
+                            </button>
+                            <button id="tryagain" type="button" onclick="reset()" class="custom-cont-button">
+                              <img src="images/try-again-button.svg" width="170"/>
+                            </button>
                         </div>
                   </div>
             </div>

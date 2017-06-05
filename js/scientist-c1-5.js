@@ -14,7 +14,7 @@ let link = "Chapter2-Start.html";
 let images = [["images/Scientist-Closed.png", "images/Scientist-Open.png"],["images/Scientist-Closed-Arm.png", "images/Scientist-Open-Arm.png"]]
 let text = ["Incredible! You are a natural.",
 	"I think you are ready to move on to the real deal.",
-	"Come with me..."];
+	"Come with me... Don't forget your lab coat."];
 
 document.getElementById("speechbubble").style.visibility = "hidden";
 

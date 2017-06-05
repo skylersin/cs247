@@ -1,7 +1,7 @@
 
 
 var BASE = 10;
-var total = 103;
+var total = 1;//03;
 var done = 0;
 
 let link = "Chapter2-3.html";
@@ -72,7 +72,7 @@ function fillSmallVial(){
 
 function showSuccess() {
   document.getElementById("success").className = "row";
-  document.getElementById("dialogue").innerHTML = "You nailed it! Did you see how each vial is a different place digit? <br> Let me explain!";
+  document.getElementById("dialogue").innerHTML = "You nailed it! Did you see how each vial represents a different place value? <br> Let me explain!";
   document.getElementById("dialogue").className = "text-success";
   done = 1;
 }
