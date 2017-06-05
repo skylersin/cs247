@@ -1,0 +1,55 @@
+/* This sheet styles the math explantion pages.
+ */
+
+
+#math-1-title{
+    font-size: 2em;
+    color: #55B26B;
+    text-align:center;
+}
+
+.explanation-text {
+    font-size:1.2em;
+}
+
+.explanation-subhead {
+    font-size:1.5em;
+    color: #55B26B;
+}
+
+.text-col-here{
+    padding-top:3%;
+}
+
+.vial-img {
+}
+
+.custom-cont-button {
+    display:inline-block;
+    line-height: 1.25;
+    text-align:center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select:none;
+    border: 0px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    transition: all .2s ease-in-out;
+    background-color: #FFFFFF;
+}
+
+.custom-cont-button:hover {
+    display:inline-block;
+    line-height: 1.25;
+    text-align:center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select:none;
+    border: 0px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background-color: #97FF93;
+    transition: all .2s ease-in-out;
+}
+
+
