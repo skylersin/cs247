@@ -12,31 +12,8 @@ var Time_Index = 0;
 
 let link = "tutorial.html";
 let images = [["images/Scientist-Closed.png", "images/Scientist-Open.png"],["images/Scientist-Closed-Arm.png", "images/Scientist-Open-Arm.png"]]
-let text = ["Oh! You're Awake... Thank Goodness!",
-	"Hi. I am Scientist Bob. There has been an emergency!",
-	"The world has been hit with a deadly virus. We need your help to stop it!",
-	"You see we aren't so good with our bases and have been struggling to make a vaccine.",
-	"Oh? You don't know your bases?",
-	"That's fine. It won't be easy, but I'm sure you will learn fast.",
-	"Let me start by showing you some important things in the lab."];
-
-let text2 = ["Ok! I think you're ready for a little test run.",
+let text = ["Ok! I think you're ready for a little test run.",
 	"Let's try out a quick excercise to make sure you have it down."];
-
-let text3 = ["Incredible! You are a natural.",
-	"I think you are ready to move onto the real deal.",
-	"Come with me..."];
-
-let text4 = ["For the past 2 weeks my team of scientists have been working to create a cure for this recent outbreak.",
-	"So far we have not been successful. We just cannot seem to get our bases right.",
-	"We need you to help us measure out some solution, however some of the measurements will be in different bases.",
-	"We will have you start out with Base 10. This is what you were just playing around with. We use base 10 everyday.",
-	"Base 10 has 10 digits 0 through 9. When we add to a 9 it will overflow into the next digit.",
-	"Blah blah blah have fun with base 10 now."];
-
-let text5 = ["OK.. YOU GOT BASE 10 DOWN - DANG",
-	"NOW FOR BASE 6. WHOOOOOO!"];
-
 document.getElementById("speechbubble").style.visibility = "hidden";
 
 
