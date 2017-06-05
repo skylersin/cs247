@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add and Subtract</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/template.css">
+    <link rel="stylesheet" type="text/css" href="css/addsubtract.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="js/addsubtract.js" defer></script>
+    <script src="js/template.js" defer></script>
+    <script src="js/next-c4-4.js" defer></script>
+  </head>
+
+    <body class="template">
+        <div class="container" id="templatebackground">
+          <!-- Content here -->
+          <div class="row">
+              <div class="col" align="center">
+                  <h2 id="gameTitle">Science Of Bases </h2>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2" align="center">
+            </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter1-Start.html" class="svg" id="chapter1">
+                  <object class="chapter" id="chapter1-svg" data="images/Chapter-1.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter2-Start.html" class="svg" id="chapter2">
+                  <object class="chapter" id="chapter2-svg" data="images/Chapter-2.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter3-Start.html" class="svg" id="chapter3">
+                  <object class="chapter" id="chapter3-svg" data="images/Chapter-3.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter4-Start.html" class="svg" id="chapter4">
+                  <object class="chapter" id="chapter4-svg" data="images/Chapter-4.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+            </div>
+          </div>
+          <div class="row">
+              <div class="col" align="center">
+                  <p id="description"> Hover over the Chapters to see a description</p>
+              </div>
+          </div>
+          <div id="scene-box" class="container">
+           <div class="row">
+                  <div id="dialogue" class="col-md-12 text-center">
+                        <h1>Good Catch! We almost blew up the lab! </h1>
+                        <h2>Add or subtract from 020<sub>3</sub> so it equals 013<sub>7</sub></h2>
+                  </div>
+            </div>
+            <div class="row  top-buffer-numbers">
+                  <div class = "col-md-5 text-right">
+                        <h2 id="num1" class="text-danger">020<sub>3</sub></h2>
+                            <div class="row buttons-here">
+                                <div class = "col-md10 offset-md-2">
+                                    <button id="add" type="button" onclick="addNum1()" class="custom-cont-button">
+                                    <img src="images/Add.svg" width="90"/>
+                                </button>
+                                    <button id="subtract" type="button" onclick="subtractNum1()" class="custom-cont-button">
+                                    <img src="images/Subtract.svg" width="90"/>
+                                </button>
+                            </div>
+                        </div>
+                  </div>
+                  <div class = "col-md-3 text-center">
+                      <p class= "equal-q">=?</p>
+                  </div>
+                  <div class = "col-md-4 text-left">
+                        <h2 id="num2" class="text-success">013<sub>7</sub></h2>
+                  </div>
+            </div>
+            <div class="row top-buffer">
+                  <div class="col-md-12 text-center">
+                        <h5 id="answer">
+                        </h5>
+                  </div>
+            </div>
+            <div class="row top-buffer">
+                  <div class="col-md-12 text-center">
+                        <button id="checkanswer" type="button" onclick="checkAnswer()" class="custom-cont-button">
+                            <img src="images/check-answer.svg" width="170"/>
+                        </button>
+                  </div>
+            </div>
+            <div class="row">
+                  <div class= "col-md-12 text-center">
+                        <button id="continue" type="button" onclick="nextPage()" class="custom-cont-button">
+                        <img src="images/continue-button.svg" width="170"/>
+                    </button>
+                  </div>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,153 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Science Of Bases</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="css/template.css">
+        <link rel="stylesheet" type="text/css" href="css/stylesheet_arrowkey.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="http://code.interactjs.io/v1.2.6/interact.min.js" defer></script>
+        <script src="js/fourth_arrow_base_5_templated.js" defer></script>
+        <script src="js/arrow-c3-8.js" defer></script>
+    </head>
+    <body class="template">
+        <div class="container" id="templatebackground">
+          <!-- Content here -->
+          <div class="row">
+              <div class="col" align="center">
+                  <h2 id="gameTitle">Science Of Bases </h2>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2" align="center">
+            </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter1-Start.html" class="svg" id="chapter1">
+                  <object class="chapter" id="chapter1-svg" data="images/Chapter-1.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter2-Start.html" class="svg" id="chapter2">
+                  <object class="chapter" id="chapter2-svg" data="images/Chapter-2.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter3-Start.html" class="svg" id="chapter3">
+                  <object class="chapter" id="chapter3-svg" data="images/Chapter-3.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter4-Start.html" class="svg" id="chapter4">
+                  <object class="chapter" id="chapter4-svg" data="images/Chapter-4.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+            </div>
+          </div>
+          <div class="row">
+              <div class="col" align="center">
+                  <p id="description"> Hover over the Chapters to see a description</p>
+              </div>
+          </div>
+
+          <div id="scene-box">
+        <div class="row direction">
+            <div class="col-md-12 ">
+                <p class="scidirection">How would you measure <b>16<sub>10</sub></b> in <b>base 5</b>?</p>
+            </div>
+        </div>
+         <div  class="row vialrow">
+            <div id="large-vial-col" class="col-md-3">
+                <!--<object id="large-vial-obj" data="images/large.svg" type="image/svg+xml">-->
+               <object id="large-vial-obj" data="images/large-base5.svg" type="image/svg+xml">
+               </object>
+               <p id="large-math">0 x 25 = <b>0</b></p>
+            </div>
+            <div id="med-vial-col" class="col-md-3">
+               <object id="med-vial-obj" data="images/med-base5.svg" type="image/svg+xml">
+               </object>
+               <p id="med-math">0 x 5 = <b>0</b></p>
+            </div>
+            <div id="small-vial-col" class="col-md-3">
+               <object id="small-vial-obj" data="images/small-base5.svg" type="image/svg+xml">
+               </object>
+               <p id="small-math">0 x 1 = <b>0</b></p>
+            </div>
+            <!--<div id="mathCol" class="col-md-3 text-right">
+                <div id="math-total" class="row sidenumrow">
+                    <p class="mathtext">16</p>
+                </div>
+                <div  class="row sidenumrow">
+                    <p id="math-largest-sub" class="mathtext">-0</p>
+                </div>
+                <div class="row sidenumrow">
+                    <p id="math-med-sub" class="mathtext">-0</p>
+                </div>
+                <div class="row sidenumrow">
+                    <p  id="math-small-sub" class="border-bot mathtext">
+                    -0</p>
+                </div>
+                <div class="row sidenumrow">
+                    <p id="math-result" class="mathtext">16</p>
+                </div>
+            </div>
+        </div>-->
+            <div id="mathCol" class="col-md-3">
+                <div class="border-all">
+                    <div id="math-total" class="row sidenumrow">
+                        <span id="math-total-side"> Total:</span><span id="math-total-side-num"> 16</span>                
+                    </div>
+                    <div  class="row sidenumrow">
+                        <p id="math-largest-sub-normal" class="mathtext">-0</p>
+                    </div>
+                    <div class="row sidenumrow">
+                        <p id="math-med-sub" class="mathtext">-0</p>
+                    </div>
+                    <div class="row sidenumrow">
+                        <p  id="math-small-sub" class="border-bot mathtext">
+                        -0</p>
+                    </div>
+                    <div class="row sidenumrow">
+                        <p id="math-result" class="mathtext">16</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="button-row" class="row">
+            <div class="col-md6 offset-md-3">
+                <p id="message"> Use your arrow keys to fill up the beakers<p>
+            </div>
+        </div>
+        <div id="question-row-second" class="row">
+            <div class="col-md4">
+                &nbsp;
+            </div>
+            <div class="col-md4 offset-md-4 text-center">
+                <div class="row" id="end-text">
+                    <p>That's right! 16<sub>10</sub> is 031<sub>5</sub></p>   
+                </div>
+                <div class="row center-block">
+                    <div class="col-md4 offset-md-1">
+                        <button id="continue-button" type="button" class="custom-cont-button" onclick="nextPage()">
+                        <img src="images/continue-button.svg" width="170"/>
+                    </button>
+                </div>
+                </div>
+            </div>
+            <div class="col-md4">
+                &nbsp;
+            </div>
+        </div>
+        </div>
+
+        </div>
+    </body>
+</html>
