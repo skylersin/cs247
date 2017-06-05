@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="314px" height="92px" viewBox="0 0 314 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Continue</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="314" height="80"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-1-Copy-7" transform="translate(-443.000000, -511.000000)">
+            <g id="Continue" transform="translate(443.000000, 511.000000)">
+                <rect id="Button-Shadow" fill="#8CF57E" x="0" y="12" width="314" height="80"></rect>
+                <g id="Button-Fill">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#8CF57E" stroke-width="1" x="0.5" y="0.5" width="313" height="79"></rect>
+                </g>
+                <text font-family="Futura-MediumItalic, Futura" font-size="50" font-style="italic" font-weight="500" letter-spacing="-5.56560993" fill="#6C6C6C">
+                    <tspan x="77.9562874" y="59">Continue</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

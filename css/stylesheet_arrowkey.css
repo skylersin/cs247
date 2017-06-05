@@ -2,12 +2,11 @@
 /* Defines CSS for the directions at top
  * of scene box*/
 .direction {
-    margin-top: -10%;
     text-align:center;
 }
 
 .scidirection {
-    margin: 5%;
+    margin: 2%;
     font-size: 2.1em;
 }
 
@@ -48,9 +47,45 @@ padding-left:40%;
     visibility:hidden;
 }
 
+.btn #continue-button{
+    border: 0px solid transparent !important; 
+}
+
+.custom-cont-button {
+    display:inline-block;
+    line-height: 1.25;
+    text-align:center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select:none;
+    border: 0px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    transition: all .2s ease-in-out;
+    background-color: #FFFFFF;
+}
+
+.custom-cont-button:hover {
+    display:inline-block;
+    line-height: 1.25;
+    text-align:center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select:none;
+    border: 0px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background-color: #97FF93;
+    transition: all .2s ease-in-out;
+}
+
 #question-text {
     font-size: 2em;
     display: inline;
+}
+
+#question-row-second {
+    display:none;
 }
 
 #continue-button:hover{
@@ -58,6 +93,7 @@ padding-left:40%;
 }
 
 #equal-correct {
+    font-size:1.5em;
     display:none;
 }
 
@@ -88,6 +124,7 @@ padding-left:40%;
  font-size: 1.1em;
  color:#B2434C;
  font-style:italic;
+ visibility:hidden;
 }
 
 #math-total{
@@ -98,8 +135,8 @@ padding-bottom:0%;
 
 #math-total-side{
 font-size: .7em;
-padding-top:7%;
 font-weight:bold;
+margin-top:7%;
 }
 
 #math-total-side-num{
@@ -116,6 +153,10 @@ padding-left:5%;
 
 #math-largest-sub {  
     padding-left: 25%;
+}
+
+#math-largest-sub-normal {  
+    padding-left: 10%;
 }
 
 #mathCol{
@@ -140,6 +181,7 @@ font-size: 1.em;
 }
 
 #button-row {
+    padding-top:3%;
     align:center;
 }
 
@@ -156,15 +198,15 @@ font-size: 1.em;
 
 }
 
+/*
 #scene-box {
     border: 3px solid #ccc;
     height: 80vh;
     margin-top:10%;
     padding:10px;
-    /*padding-top:20%;*/
     padding:5%;
     padding-top:10%;
-}
+}*/
 
 .border-bot {
     padding-left:15%;
