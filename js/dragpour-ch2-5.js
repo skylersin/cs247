@@ -1,4 +1,4 @@
-var total = 1;//03;
+var total = 103;
 var done = 0;
 var BASE = 6;
 

@@ -1,7 +1,7 @@
 
 
 var BASE = 10;
-var total = 1;//03;
+var total = 103;
 var done = 0;
 
 let link = "Chapter2-3.html";
