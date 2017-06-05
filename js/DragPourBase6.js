@@ -1,5 +1,5 @@
-
-
+var total = 103;
+var done = 0;
 var BASE = 6;
 
  var largevial = document.getElementById("largevial");
@@ -22,24 +22,25 @@ var BASE = 6;
 
 //Increments by 20
 var smallVial = 0
-// document.getElementById("smallVialNum").textContent = smallVial;
+document.getElementById("smallVialNum").innerHTML = smallVial;
 var medVial = 0
-// document.getElementById("medVialNum").textContent = medVial;
+document.getElementById("medVialNum").innerHTML = medVial;
 var largeVial = 0
-// document.getElementById("largeVialNum").textContent = largeVial;
-var total = 17
+document.getElementById("largeVialNum").innerHTML = largeVial;
+var vialFill = document.getElementById("totalVial");
+vialFill.innerHTML = total;
 
 
 function updateNumDisplays(){
-  // document.getElementById("smallVialNum").textContent = smallVial;
+  document.getElementById("smallVialNum").innerHTML = smallVial;
   var vialFill = document.getElementById("Vial-Fill-Small");
   vialFill.setAttribute("y", 120-smallVial*20)
 
-  // document.getElementById("medVialNum").textContent = medVial;
+  document.getElementById("medVialNum").innerHTML = medVial;
   var vialFill = document.getElementById("Vial-Fill-Med");
   vialFill.setAttribute("y", 120-medVial*20)
 
-  // document.getElementById("largeVialNum").textContent = largeVial;
+  document.getElementById("largeVialNum").innerHTML = largeVial;
   var vialFill = document.getElementById("Vial-Fill-Large");
   vialFill.setAttribute("y", 120-largeVial*20)
 
@@ -52,16 +53,44 @@ function fillSmallVial(){
     total--;
     smallVial++;
     updateNumDisplays();
+    if (total == 0 && smallVial != BASE) {
+      showSuccess();
+    }
   }
-  console.log("Here");
-  if (total == 0) {
-    document.getElementById("success").className = "row";
+  if (done != 1) {
+    if (smallVial % BASE == 0) {
+      showDragMessage();
+    } else {
+      showFillMessage();
+    }
   }
+}
+
+function showSuccess() {
+  document.getElementById("success").className = "row";
+  document.getElementById("dialogue").innerHTML = "You did it! Continue to next page for full explanation!";
+  document.getElementById("dialogue").className = "text-success";
+  done = 1;
+}
+
+function showFillMessage() {
+  document.getElementById("dialogue").innerHTML = "Keep filling the small vial <br> by clicking on the faucet number!";
+  document.getElementById("dialogue").className = "text";
+}
+
+function showDragMessage() {
+  document.getElementById("dialogue").innerHTML = "The small vial's full! <br> Drag the small vial to the medium vial!";
+  document.getElementById("dialogue").className = "text-danger";
 }
 
 function makeVialDraggable(){
    document.getElementById("med-div").className = "draggable drag-drop vial";
-   document.getElementById("large-div").className = "dropzone vial";
+   document.getElementById("large-div").className = "dropzoneLarge vial";
+}
+
+function showMedFillMessage() {
+  document.getElementById("dialogue").innerHTML = "The medium vial's full! <br> Drag the medium vial to the large vial!";
+  document.getElementById("dialogue").className = "text-danger";
 }
 
 function emptyMedVial() {
@@ -70,15 +99,15 @@ function emptyMedVial() {
   medVial = 0;
   updateNumDisplays();
   console.log(largeVial);
-  document.getElementById("med-div").className = "dropzone vial";
+  document.getElementById("med-div").className = "dropzoneMed vial";
   document.getElementById("large-div").className = "vial";
 }
 
 
 
-interact('.dropzone').dropzone({
+interact('.dropzoneLarge').dropzone({
   // only accept elements matching this CSS selector
-  accept: '#small-div, #med-div',
+  accept: '#med-div',
   // Require a 75% element overlap for a drop to be possible
   overlap: 0.75,
 
@@ -107,11 +136,17 @@ interact('.dropzone').dropzone({
       medVial += 1;
       smallVial = 0;
       updateNumDisplays();
+      showFillMessage();
       if (medVial == BASE) {
+        showMedFillMessage();
         makeVialDraggable();
+      }
+      if (total == 0) {
+        showSuccess();
       }
     } else if (medVial == BASE) {
       emptyMedVial();
+      showFillMessage();
     }
   },
   ondrop: function (event) {
@@ -124,6 +159,62 @@ interact('.dropzone').dropzone({
   }
 });
 
+interact('.dropzoneMed').dropzone({
+  // only accept elements matching this CSS selector
+  accept: '#small-div',
+  // Require a 75% element overlap for a drop to be possible
+  overlap: 0.75,
+
+  // listen for drop related events:
+
+  ondropactivate: function (event) {
+    // add active dropzone feedback
+    event.target.classList.add('drop-active');
+  },
+  ondragenter: function (event) {
+    var draggableElement = event.relatedTarget,
+        dropzoneElement = event.target;
+
+    // feedback the possibility of a drop
+    dropzoneElement.classList.add('drop-target');
+    // draggableElement.classList.add('can-drop');
+    // draggableElement.textContent = 'Dragged in';
+
+  },
+  ondragleave: function (event) {
+    // remove the drop feedback style
+    event.target.classList.remove('drop-target');
+   //Increments by 20
+   //Set increment value to 0 after 
+    if (smallVial == BASE) {
+      medVial += 1;
+      smallVial = 0;
+      updateNumDisplays();
+      showFillMessage();
+      if (medVial == BASE) {
+        showMedFillMessage();
+        makeVialDraggable();
+      }
+      if (total == 0) {
+        showSuccess();
+      }
+    } else if (medVial == BASE) {
+      emptyMedVial();
+      showFillMessage();
+    }
+  },
+  ondrop: function (event) {
+    event.relatedTarget.textContent = 'Dropped';
+  },
+  ondropdeactivate: function (event) {
+    // remove active dropzone feedback
+    event.target.classList.remove('drop-active');
+    event.target.classList.remove('drop-target');
+  }
+});
+
+
+
 // target elements with the "draggable" class
 interact('.draggable')
   .draggable({
@@ -133,7 +224,7 @@ interact('.draggable')
     restrict: {
       restriction: "parent",
       endOnly: true,
-      elementRect: { top: -1.9, left: 0, bottom: 10, right: 10}
+      elementRect: { top: -0.7, left: 0, bottom: 10, right: 10}
     },
     // enable autoScroll
     autoScroll: true,
