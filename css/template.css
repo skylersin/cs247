@@ -1,0 +1,21 @@
+.template {
+  background-color: #464646;
+}
+
+#gameTitle{
+  color: #89F678;
+  font-size: 30pt;
+  margin: 10px;
+  margin-bottom: 10px;
+  font-family: BebasNeue;
+}
+
+#description{
+  color: #FFE100;
+  font-size: 12pt;
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url("font/BebasNeue.otf") format("opentype");
+}
