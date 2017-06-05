@@ -127,6 +127,13 @@ padding-left:40%;
  visibility:hidden;
 }
 
+#message-first {
+    margin-left:-30%;
+ font-size: 1.1em;
+ color:#B2434C;
+ font-style:italic;
+}
+
 #math-total{
 font-size: 1.1em;
 padding:1%;

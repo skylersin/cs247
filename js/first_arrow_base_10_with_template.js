@@ -161,11 +161,11 @@ function places_to_base_10(place_0, place_1, place_2){
 function set_message(text, color_green=false){
    if(!DONE){
        if(color_green){
-         document.getElementById("message").style.color = GREEN_COLOR; 
+         document.getElementById("message-first").style.color = GREEN_COLOR; 
        }else{
-         document.getElementById("message").style.color = RED_COLOR; 
+         document.getElementById("message-first").style.color = RED_COLOR; 
        }
-       document.getElementById("message").textContent = text; 
+       document.getElementById("message-first").textContent = text; 
    }
 }
 
