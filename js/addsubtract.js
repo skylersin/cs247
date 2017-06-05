@@ -54,9 +54,10 @@ function checkAnswer() {
 	if (num1 == num2) {
 		var html = document.getElementById("answer");
 		html.innerHTML = "Correct! These are both " + num1+"<sub>10</sub>"; 
-		var html = document.getElementById("continue");
-		html.className = "btn btn-secondary btn-lg btn-outline-success ";
-		document.getElementById("checkanswer").className = "hidden";
+		document.getElementById("continue").style.visibility="visible";
+        //var html = document.getElementById("continue");
+		//html.className = "btn btn-secondary btn-lg btn-outline-success ";
+		document.getElementById("checkanswer").style.display = "none";
 	} else {
 		var html = document.getElementById("answer");
 		html.innerHTML = "Wrong Answer! Try Again!";
