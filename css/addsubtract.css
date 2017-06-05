@@ -1,17 +1,63 @@
-.top-buffer { margin-top:20px; }
-
-body {
-  font-family: 'Futura', sans-serif;
+.top-buffer { 
+	margin-top:5%; 
 }
 
-.hidden {
-  display: none !important;
-  visibility: hidden !important;
+.top-buffer-numbers { 
+	margin-top:5%; 
 }
 
-.scene-box {
+.border {
     border: 3px solid #ccc;
-    margin-top:5%;
-    padding-top:5%;
-    padding-bottom: 5%;
 }
+
+
+#continue{
+    visibility:hidden;
+}
+
+#num1 {
+    font-size:4em;
+    color: #000000 !important;
+}
+
+#num2 {
+    font-size:4em;
+    color: #979797 !important;
+}
+
+.equal-q {
+    font-size: 3em;
+}
+
+.buttons-here{
+    padding-left:30%;
+}
+
+.custom-cont-button {
+    display:inline-block;
+    line-height: 1.25;
+    text-align:center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select:none;
+    border: 0px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    transition: all .2s ease-in-out;
+    background-color: #FFFFFF !important;
+}
+
+.custom-cont-button:hover {
+    display:inline-block;
+    line-height: 1.25;
+    text-align:center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select:none;
+    border: 0px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background-color: #97FF93 !important;
+    transition: all .2s ease-in-out;
+}
+

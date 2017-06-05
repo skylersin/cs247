@@ -71,4 +71,3 @@ function reverseString(str) {
     var joinArray = reverseArray.join(""); 
     return joinArray; 
 }
-

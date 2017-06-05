@@ -70,7 +70,7 @@ function fillSmallVial(){
 
 function showSuccess() {
   document.getElementById("success").className = "row";
-  document.getElementById("dialogue").innerHTML = "You did it! Notice how each vial is a different place digit? <br> Continue to next page for full explanation!";
+  document.getElementById("dialogue").innerHTML = "You nailed it! Did you see how each vial is a different place digit? <br> Let me explain!";
   document.getElementById("dialogue").className = "text-success";
   done = 1;
 }

@@ -1,0 +1,106 @@
+
+<!doctype html>
+<html>
+    <head>
+        <title>Science Of Bases</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="css/template.css">
+        <link rel="stylesheet" type="text/css" href="css/stylesheet_math.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="http://code.interactjs.io/v1.2.6/interact.min.js" defer></script>
+        <script src="js/template.js" defer></script>
+        <script src="js/explain-c2-3.js" defer></script>
+    </head>
+    <body class="template">
+        <div class="container" id="templatebackground">
+          <!-- Content here -->
+          <div class="row">
+              <div class="col" align="center">
+                  <h2 id="gameTitle">Science Of Bases </h2>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-md-2" align="center">
+            </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter1-Start.html" class="svg" id="chapter1">
+                  <object class="chapter" id="chapter1-svg" data="images/Chapter-1.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter2-Start.html" class="svg" id="chapter2">
+                  <object class="chapter" id="chapter2-svg" data="images/Chapter-2.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter3-Start.html" class="svg" id="chapter3">
+                  <object class="chapter" id="chapter3-svg" data="images/Chapter-3.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+                <a href="Chapter4-Start.html" class="svg" id="chapter4">
+                  <object class="chapter" id="chapter4-svg" data="images/Chapter-4.svg" type="image/svg+xml">
+                  </object>
+                </a>
+              </div>
+              <div class="col-md-2" align="center">
+            </div>
+          </div>
+          <div class="row">
+              <div class="col" align="center">
+                  <p id="description"> Hover over the Chapters to see a description</p>
+              </div>
+          </div>
+
+          <div id="scene-box">
+                <p id="math-1-title"> Place Values </p>
+              <div class="row">
+                  <div class="col-md-4">
+                        <img id="vials_math_1" class="vial-img" src="images/vial_screenshot_math_1.png"/>
+                  </div>
+                  <div class="col-md-8 text-col-here">
+                      <p class="explanation-text">
+                      <i>Did you notice how each beaker held a different amount of liquid?</i> We can think of the <b>beakers as place values</b> in math. Depending on their place among the other beakers, they have different values. </p>
+                      
+                      <p class="explanation-text"> In base 10, the left beaker represents the hundred's place, so each unit in that beaker represents a value of 100. The far right beaker has the smallest value, 1 in base 10.
+                      </p>
+                   </div>
+                <!-- ends the row-->
+               </div>
+                  <div class="row center">
+                      <div class="col-md-12">
+                          <p class="explanation-subhead text-center">
+                          <i>So how does that give us <b>103</b>?</i>
+                          </p>
+                  </div>
+                 </div>
+                  <p class="explanation-text text-center">
+                  We add each together the product of the place value and the <b>digit</b> in its place.</p>
+                  
+                  <div class="row"> 
+                      <div class="col-md-12">
+                  <p class="explanation-text text-center">
+                  (<b>1</b> x 100) + (<b>0</b> x 10) + (<b>1</b> x 3) = <b>103</b>
+                  </p>
+              </div>
+              </div>
+                <div class="row center">
+                    <div class="col-md-4 offset-md-5">
+                    <button id="continue-button" type="button" class="custom-cont-button" onclick="nextPage()">
+                 <img src="images/continue-button.svg" width="170"/>
+              </button>
+          </div>
+          </div>
+
+
+          </div>
+
+        </div>
+    </body>
+</html>
